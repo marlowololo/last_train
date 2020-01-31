@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c056afc5ddc57004f8eb61b384be0fec, type: 3}
+  m_Name: BebeTest_Data
+  m_EditorClassIdentifier: 
+  dataName: BebeTest
+  dragonBonesJSON: {fileID: 4900000, guid: 3a429e3eff3a1fd4e987221e619588b7, type: 3}
+  textureAtlas:
+  - textureAtlasJSON: {fileID: 4900000, guid: f6735ad36a3cc1f4ba37ddebad894edf, type: 3}
+    texture: {fileID: 2800000, guid: ae22979b804df204fbcb4238f4457002, type: 3}
+    material: {fileID: 2100000, guid: 33baa6a28c981be4695b99956e70276d, type: 2}
+    uiMaterial: {fileID: 0}
