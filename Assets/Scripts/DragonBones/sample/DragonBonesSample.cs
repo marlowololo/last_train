@@ -12,6 +12,12 @@ public class DragonBonesSample : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             string animationPlayed = walking ? "WALKING" : "IDLE";
+            ac.animation.FadeIn(animationPlayed, 0.3f);
+            walking = !walking;
+        }
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            string animationPlayed = walking ? "WALKING" : "IDLE";
             ac.animation.Play(animationPlayed);
             walking = !walking;
         }
