@@ -16,8 +16,9 @@ public class BaseDoor : MonoBehaviour
         GameManager.Instance.selectedWorker.MoveTo(gameObject);
     }
 
-    public void TriggerAnimation()
+    public void CollectResource()
     {
+        currentWorker.GetComponentInParent<PlayableWorkerInventory>().Add(1);
         currentWorker.animation.FadeIn("ForageUp1",0.25f);
     }
 }

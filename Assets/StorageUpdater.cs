@@ -18,7 +18,8 @@ public class StorageUpdater : MonoBehaviour
 
     private void Update() 
     {
-        if(itemCount>=maxItemCount)
+        //if(itemCount>=maxItemCount)
+        if(storageAsset.resource >= maxItemCount)
         {
             isFull=true;
         }
@@ -34,30 +35,36 @@ public class StorageUpdater : MonoBehaviour
     }
     public void Add(int n=1)
     {
-        itemCount+=n;
-        if(itemCount>maxItemCount)
-        {
-            itemCount=maxItemCount;
-        }
+        storageAsset.resource += n;
+        //itemCount+=n;
+        //if(itemCount>maxItemCount)
+        //{
+        //    itemCount=maxItemCount;
+        //}
 
     }
     public void Remove(int n=1)
     {
-        itemCount-=n;
-        if(itemCount<0)
+        storageAsset.resource -= n;
+        if(storageAsset.resource < 0)
         {
-            itemCount=0;
-        }   
+            storageAsset.resource = 0;
+        }
+        //itemCount -=n;
+        //if(itemCount<0)
+        //{
+        //    itemCount=0;
+        //}   
     }
 
     public void RemoveAll()
     {
-        itemCount=0;
+        storageAsset.resource = 0;
     }
 
     public int Count()
     {
-        return itemCount;
+        return (int)storageAsset.resource;
     }
 
 
