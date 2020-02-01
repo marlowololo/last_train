@@ -24,7 +24,7 @@ public class BackgroundRepeater : MonoBehaviour
             if(transform.position.x+0.5*spriteSizeX<=Camera.main.transform.position.x+0.5*screenSizeX)
             {
                 isHaveClone=true;
-                clone = Instantiate(gameObject,transform.position+new Vector3(spriteSizeX,0,0),Quaternion.identity);
+                clone = Instantiate(gameObject,transform.position+new Vector3(spriteSizeX,0,0),Quaternion.identity, this.transform.parent);
                 clone.name = "c";
             }
         }

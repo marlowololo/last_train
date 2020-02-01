@@ -15,4 +15,19 @@ public class Wagon : MonoBehaviour
         MaxCapacity = maxCapacity;
         CurrentPassenger = currentPassenger;
     }
+
+    public void DamageWagon(float damageAmmount)
+    {
+        WagonHealth -= damageAmmount;
+    }
+
+    public void RepairWagon(float repairAmmount)
+    {
+        WagonHealth += repairAmmount;
+    }
+
+    public void UpdatePassangerCount(int count)
+    {
+        CurrentPassenger = count;
+    }
 }
