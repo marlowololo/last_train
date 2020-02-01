@@ -157,6 +157,7 @@ MonoBehaviour:
   selectedWorker: {fileID: 34644622}
   paralaxController: {fileID: 1972086780}
   resourceInventory: {fileID: 11400000, guid: 59682526348bda3a282f9f08b0ea865b, type: 2}
+  gameplayUIManager: {fileID: 0}
 --- !u!4 &34644621
 Transform:
   m_ObjectHideFlags: 0
@@ -827,6 +828,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PrefabLadder
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100919382066567559, guid: 73f5e57839b52e7bbb29c73fd4e79eb0,
+        type: 3}
+      propertyPath: roofYPosition
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73f5e57839b52e7bbb29c73fd4e79eb0, type: 3}
@@ -2142,6 +2148,9 @@ MonoBehaviour:
   resourceInventoryAsset: {fileID: 11400000, guid: 59682526348bda3a282f9f08b0ea865b,
     type: 2}
   resourceText: {fileID: 1275120069}
+  levelPanel: {fileID: 0}
+  playNextLevelButton: {fileID: 0}
+  repairTrainButton: {fileID: 0}
 --- !u!114 &2033175310
 MonoBehaviour:
   m_ObjectHideFlags: 0
