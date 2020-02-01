@@ -13,6 +13,9 @@ public class PlayableWorkerHealth : MonoBehaviour
     [Range(0,500)] [SerializeField] float increasePerSecond;
     [Range(0,10)] [SerializeField] float timeStep;
 
+    IEnumerator decreaseHealthInstance;
+    IEnumerator increaseHealthInstance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +27,11 @@ public class PlayableWorkerHealth : MonoBehaviour
         
     }
 
-    IEnumerator DecreaseHealth(float decreasePerSec)
+    IEnumerator DecreaseHealth()
     {
         while(true)
         {
-            health-=timeStep*decreasePerSec;
+            health-=timeStep*decreasePerSecond;
             if(health<0)
             {
                 health=0;
@@ -38,11 +41,11 @@ public class PlayableWorkerHealth : MonoBehaviour
         }
     }
 
-    IEnumerator IncreaseHealth(float increasePerSec)
+    IEnumerator IncreaseHealth()
     {
         while(health<maxHealth)
         {
-            health+=timeStep*increasePerSec;
+            health+=timeStep*increasePerSecond;
             if(health>maxHealth)
             {
                 health=maxHealth;
@@ -52,30 +55,25 @@ public class PlayableWorkerHealth : MonoBehaviour
 
     }
 
-    public void StartDecreaseHealth(float decreasePerSec)
-    {
-        StartCoroutine(DecreaseHealth(decreasePerSec));
-    }
+  
     public void StartDecreaseHealth()
     {
-        StartCoroutine(DecreaseHealth(decreasePerSecond));
+        decreaseHealthInstance= DecreaseHealth();
+        StartCoroutine(decreaseHealthInstance);
     }
     public void StopDecreaseHealth()
     {
-        StopCoroutine("DecreaseHealth");
+        StopCoroutine(decreaseHealthInstance);
     }
 
-    public void StartIncreaseHealth(float increasePerSec)
-    {
-        StartCoroutine(IncreaseHealth(increasePerSec));
-    }
     public void StartIncreaseHealth()
     {
-        StartCoroutine(IncreaseHealth(increasePerSecond));
+        increaseHealthInstance=IncreaseHealth();
+        StartCoroutine(increaseHealthInstance);
     }
     public void StopIncreaseHealth()
     {
-        StopCoroutine("IncreaseHealth");
+        StopCoroutine(increaseHealthInstance);
     }
 
     public void SetHealth(float healthVal)
