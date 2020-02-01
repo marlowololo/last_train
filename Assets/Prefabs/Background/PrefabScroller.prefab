@@ -139,6 +139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4161297958178209665}
+  - component: {fileID: 5296227618533026165}
   m_Layer: 0
   m_Name: PrefabScroller
   m_TagString: Untagged
@@ -163,6 +164,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5296227618533026165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616118669985348546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77f85ea943e96b4ea9de293133c8d0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabList:
+  - {fileID: 4350693878026696481}
+  - {fileID: 6794393710630004873}
+  - {fileID: 6089633139297234286}
 --- !u!1 &1386335878557057766
 GameObject:
   m_ObjectHideFlags: 0

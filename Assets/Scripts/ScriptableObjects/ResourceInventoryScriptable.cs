@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ResourceInventoryScriptable : ScriptableObject
 {
-    public int resource;
+    public float resource;
 }

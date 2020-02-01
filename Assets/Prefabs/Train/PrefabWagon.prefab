@@ -161,6 +161,8 @@ MonoBehaviour:
   HealthBar: {fileID: 8964196403931320374}
   MinBarSize: 0
   MaxBarSize: 5
+  resourceInventoryAsset: {fileID: 11400000, guid: 59682526348bda3a282f9f08b0ea865b,
+    type: 2}
 --- !u!212 &1752272095968091930
 SpriteRenderer:
   m_ObjectHideFlags: 0

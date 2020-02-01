@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public ResourceSpawner resourceSpawner;
     public WagonPartDestroyer wagonPartDestroyer;
     public SelectedWorker selectedWorker;
+    public ParalaxController paralaxController;
 
     int currentResourceSpawnIndex;
     float currentTime;
@@ -71,6 +72,7 @@ public class GameManager : MonoBehaviour
             if(currentTime >= levelTime)
             {
                 traveling = false;
+                paralaxController.StopMovement();
                 Debug.Log("LEVEL FINISHED");
             }
         }
