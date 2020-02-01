@@ -207,6 +207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ZoomSpeed: 50
   MoveSpeed: 0.1
+  MaxZoomIn: 3
+  MaxZoomOut: 6
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

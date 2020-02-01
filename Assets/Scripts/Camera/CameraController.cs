@@ -7,15 +7,20 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] private float ZoomSpeed;
     [SerializeField] private float MoveSpeed;
+    [SerializeField] private float MaxZoomIn = 1;
+    [SerializeField] private float MaxZoomOut = 1;
 
     private bool isHolding;
     private Vector3 mouseInitialPosition;
     private Vector3 cameraInitialPosition;
+    private Vector3 cameraMoveVector;
 
     private Camera MainCamera;
     // Start is called before the first frame update
     void Start()
     {
+        cameraMoveVector = Vector3.zero;
+        mouseInitialPosition = Vector3.zero;
         isHolding = false;
         MainCamera = GetComponent<Camera>();
     }
@@ -26,19 +31,23 @@ public class CameraController : MonoBehaviour
         //Move
         if(Input.GetMouseButtonDown(0))
         {
-            mouseInitialPosition = Input.mousePosition;
+            mouseInitialPosition.Set(Input.mousePosition.x, 0, 0);
             cameraInitialPosition = MainCamera.transform.position;
         }
 
         isHolding = Input.GetMouseButton(0);
         if(isHolding)
         {
-            Vector3 movementOffset = mouseInitialPosition - Input.mousePosition;
+            cameraMoveVector.Set(Input.mousePosition.x, 0, 0);
+            Vector3 movementOffset = mouseInitialPosition - cameraMoveVector;
             MainCamera.transform.position = cameraInitialPosition + (movementOffset * MoveSpeed);
         }
 
         //Zoom
         float scrollValue = Input.GetAxis("Mouse ScrollWheel");
-        MainCamera.orthographicSize += ZoomSpeed * scrollValue * Time.deltaTime;
+        float zoomResult = MainCamera.orthographicSize + (ZoomSpeed * scrollValue * Time.deltaTime);
+        zoomResult = Mathf.Clamp(zoomResult, MaxZoomIn, MaxZoomOut);
+        MainCamera.orthographicSize = zoomResult;
+
     }
 }
