@@ -5,7 +5,9 @@ using UnityEngine;
 public class Wagon : MonoBehaviour
 {
 
-    private float WagonHealth;
+    [SerializeField] private List<WagonPart> wagonParts;
+
+    public float WagonHealth;
     private int MaxCapacity;
     private int CurrentPassenger;
 
@@ -29,5 +31,10 @@ public class Wagon : MonoBehaviour
     public void UpdatePassangerCount(int count)
     {
         CurrentPassenger = count;
+    }
+
+    public List<WagonPart> GetWagonParts()
+    {
+        return wagonParts;
     }
 }

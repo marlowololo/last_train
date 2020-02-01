@@ -18,3 +18,5 @@ MonoBehaviour:
     - 1
     - 5
     ResourceSpawnTime: 2
+    DamageTimerRandomMin: 3
+    DamageTimerRandomMax: 5

@@ -14,5 +14,7 @@ public class LevelSettingScriptable : ScriptableObject
         public float LevelTime;
         public List<float> StartSpawnTime;
         public float ResourceSpawnTime;
+        public float DamageTimerRandomMin;
+        public float DamageTimerRandomMax;
     }
 }
