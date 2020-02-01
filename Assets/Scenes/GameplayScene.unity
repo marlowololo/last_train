@@ -152,6 +152,8 @@ MonoBehaviour:
   levelSetting: {fileID: 11400000, guid: 06b90e5e6d19426498ca506c1267b078, type: 2}
   train: {fileID: 1773901720954894687}
   resourceSpawner: {fileID: 767465304}
+  wagonDestroyer: {fileID: 433412303}
+  wagonPartDestroyer: {fileID: 433412302}
 --- !u!4 &34644621
 Transform:
   m_ObjectHideFlags: 0
@@ -235,6 +237,64 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af9a7ab368fe08b2e87fcf25dc05dae6, type: 3}
+--- !u!1 &433412300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433412301}
+  - component: {fileID: 433412302}
+  - component: {fileID: 433412303}
+  m_Layer: 0
+  m_Name: WagonDestroyer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &433412301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433412300}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433412302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433412300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb0c199550b05944b816ed6414e8272d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultDamage: 25
+--- !u!114 &433412303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433412300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b35132110003d4e838c2682d6f44a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultDamage: 25
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +552,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1773901720954894687, guid: 1f52f2b5da0d89c41b4132e667acbf38,
+        type: 3}
+      propertyPath: WagonCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3723256770324558376, guid: 1f52f2b5da0d89c41b4132e667acbf38,
         type: 3}
       propertyPath: m_Name

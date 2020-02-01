@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Train : MonoBehaviour
 {
-    public Wagon WagonPrefab;
-    public float WagonCount;
-    public float WagonOffset;
+    [SerializeField] private Wagon WagonPrefab;
+    [SerializeField] private float WagonCount;
+    [SerializeField] private float WagonOffset;
     private List<Wagon> ListWagon;
 
     public void InitWagon()
@@ -37,5 +37,20 @@ public class Train : MonoBehaviour
     public void RepairWagon(int wagonIndex, float repairAmmount)
     {
         ListWagon[wagonIndex].RepairWagon(repairAmmount);
+    }
+
+    public List<WagonPart> GetAllWagonPart()
+    {
+        List<WagonPart> wagonParts = new List<WagonPart>();
+        foreach(var item in ListWagon)
+        {
+            wagonParts.AddRange(item.GetWagonParts());
+        }
+        return wagonParts;
+    }
+
+    public List<Wagon> GetAllWagon()
+    {
+        return ListWagon;
     }
 }

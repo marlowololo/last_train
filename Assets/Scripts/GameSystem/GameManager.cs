@@ -5,27 +5,54 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+    private static GameManager _instance;
+    public static GameManager Instance
+    {
+        get
+        {
+            return _instance;
+        }
+    }
+
     [SerializeField] private LevelSettingScriptable levelSetting;
     [SerializeField] private Train train;
     [SerializeField] private ResourceSpawner resourceSpawner;
+    [SerializeField] private WagonDestroyer wagonDestroyer;
+    [SerializeField] private WagonPartDestroyer wagonPartDestroyer;
+    [SerializeField] private SelectedWorker selectedWorker;
 
     int currentResourceSpawnIndex;
     float currentTime;
     bool traveling;
+
+    private void Awake()
+    {
+        _instance = GetComponent<GameManager>();
+    }
 
     void Start()
     {
         currentResourceSpawnIndex = 0;
         currentTime = 0;
         traveling = false;
-        StartLevel(0);
         train.InitWagon();
+        StartLevel(0);
     }
     
     public void StartLevel(int levelIndex)
     {
         traveling = true;
         StartCoroutine(StartLevelTimer(levelIndex));
+        wagonPartDestroyer.Init(
+            train.GetAllWagonPart(), 
+            levelSetting.LevelSettingDatas[levelIndex].DamageTimerRandomMin, 
+            levelSetting.LevelSettingDatas[levelIndex].DamageTimerRandomMax
+        );
+        wagonDestroyer.Init(
+            train.GetAllWagon(),
+            levelSetting.LevelSettingDatas[levelIndex].DamageTimerRandomMin,
+            levelSetting.LevelSettingDatas[levelIndex].DamageTimerRandomMax
+        );
     }
 
     private IEnumerator StartLevelTimer(int levelIndex)
