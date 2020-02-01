@@ -14,12 +14,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [SerializeField] private LevelSettingScriptable levelSetting;
-    [SerializeField] private Train train;
-    [SerializeField] private ResourceSpawner resourceSpawner;
-    [SerializeField] private WagonDestroyer wagonDestroyer;
-    [SerializeField] private WagonPartDestroyer wagonPartDestroyer;
-    [SerializeField] private SelectedWorker selectedWorker;
+    public LevelSettingScriptable levelSetting;
+    public Train train;
+    public ResourceSpawner resourceSpawner;
+    public WagonDestroyer wagonDestroyer;
+    public WagonPartDestroyer wagonPartDestroyer;
+    public SelectedWorker selectedWorker;
 
     int currentResourceSpawnIndex;
     float currentTime;

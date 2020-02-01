@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34644621}
   - component: {fileID: 34644620}
+  - component: {fileID: 34644622}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -154,6 +155,7 @@ MonoBehaviour:
   resourceSpawner: {fileID: 767465304}
   wagonDestroyer: {fileID: 433412303}
   wagonPartDestroyer: {fileID: 433412302}
+  selectedWorker: {fileID: 34644622}
 --- !u!4 &34644621
 Transform:
   m_ObjectHideFlags: 0
@@ -168,6 +170,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &34644622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34644619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378f04064522c23e4914ae86e0858ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedWorker: {fileID: 1806747401}
 --- !u!1001 &388688171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -476,6 +491,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dddb908f378d2941b9877a012d0bd65, type: 3}
+--- !u!1 &1806747401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5363268666861091670, guid: fa572e6abf21a7544a28550b5cbd6e41,
+    type: 3}
+  m_PrefabInstance: {fileID: 2065177854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2065177854
 PrefabInstance:
   m_ObjectHideFlags: 0
