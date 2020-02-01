@@ -81,11 +81,13 @@ public class PlayableWorkerHealth : MonoBehaviour
         health=healthVal;
     }
 
+    public float GetHealth()
+    {
+        return health;
+    }
+
     public void ResetHealth()
     {
         health=maxHealth;
     }
-    
-
-
 }
