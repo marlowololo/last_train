@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     public LevelSettingScriptable levelSetting;
     public Train train;
     public ResourceSpawner resourceSpawner;
-    public WagonDestroyer wagonDestroyer;
     public WagonPartDestroyer wagonPartDestroyer;
     public SelectedWorker selectedWorker;
 
@@ -46,11 +45,6 @@ public class GameManager : MonoBehaviour
         wagonPartDestroyer.Init(
             train.GetAllWagonPart(), 
             levelSetting.LevelSettingDatas[levelIndex].DamageTimerRandomMin, 
-            levelSetting.LevelSettingDatas[levelIndex].DamageTimerRandomMax
-        );
-        wagonDestroyer.Init(
-            train.GetAllWagon(),
-            levelSetting.LevelSettingDatas[levelIndex].DamageTimerRandomMin,
             levelSetting.LevelSettingDatas[levelIndex].DamageTimerRandomMax
         );
     }

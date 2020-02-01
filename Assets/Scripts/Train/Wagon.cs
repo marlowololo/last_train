@@ -6,12 +6,42 @@ public class Wagon : MonoBehaviour
 {
 
     [SerializeField] private List<WagonPart> wagonParts;
+    [SerializeField] private GameObject wagonHealthBar;
+    [SerializeField] private float minBarSize;
+    [SerializeField] private float maxBarSize;
 
     public float WagonHealth;
     private int MaxCapacity;
     private int CurrentPassenger;
 
-    void InitWagonData(float wagonHealth, int maxCapacity, int currentPassenger)
+    private int brokenParts;
+
+    private const float WAGON_DEFAULT_DAMAGE = 7.5f;
+
+    public void Update()
+    {
+        brokenParts = 0;
+        foreach(WagonPart part in wagonParts)
+        {
+            if(part.PartHealth <= 0)
+            {
+                brokenParts++;
+            }
+        }
+
+        if(brokenParts > 0)
+        {
+            WagonHealth -= brokenParts * WAGON_DEFAULT_DAMAGE * Time.deltaTime;
+        }
+
+        wagonHealthBar.transform.localScale = new Vector3(
+            Mathf.Lerp(minBarSize, maxBarSize, WagonHealth / 100),
+            wagonHealthBar.transform.localScale.y,
+            wagonHealthBar.transform.localScale.z
+        );
+    }
+
+    public void InitWagonData(float wagonHealth, int maxCapacity, int currentPassenger)
     {
         WagonHealth = wagonHealth;
         MaxCapacity = maxCapacity;

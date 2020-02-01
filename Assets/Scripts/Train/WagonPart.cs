@@ -11,18 +11,18 @@ public class WagonPart : MonoBehaviour
     [SerializeField] private float MinBarSize;
     [SerializeField] private float MaxBarSize;
 
-    bool isWorkerAround;
+    private bool isBeingRepaired;
 
     private void Start()
     {
-        isWorkerAround = false;
+        isBeingRepaired = false;
     }
 
     private void Update()
     {
-        if(isWorkerAround)
+        if(isBeingRepaired)
         {
-            PartHealth += 1 * Time.deltaTime;
+            PartHealth += 15 * Time.deltaTime;
         }
 
         HealthBar.transform.localScale = new Vector3(
@@ -31,5 +31,12 @@ public class WagonPart : MonoBehaviour
             HealthBar.transform.localScale.z
         );
     }
+
+    public void SetBeingRepaired(bool value)
+    {
+        isBeingRepaired = value;
+    }
+
+
 
 }
