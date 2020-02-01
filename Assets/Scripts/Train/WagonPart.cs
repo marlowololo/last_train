@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DragonBones;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ public class WagonPart : MonoBehaviour
     [SerializeField] ResourceInventoryScriptable resourceInventoryAsset;
 
     private bool isBeingRepaired;
+    private const float MAX_HEALTH = 100f;
 
     private void Start()
     {
@@ -24,8 +26,12 @@ public class WagonPart : MonoBehaviour
     {
         if(isBeingRepaired)
         {
-            PartHealth += 15 * Time.deltaTime;
-            resourceInventoryAsset.resource -= 1 * Time.deltaTime;
+            if(resourceInventoryAsset.resource > 0 && PartHealth < MAX_HEALTH)
+            {
+                GameManager.Instance.selectedWorker.PlayAnimation("Fixing");
+                PartHealth += 15 * Time.deltaTime;
+                resourceInventoryAsset.resource -= 1 * Time.deltaTime;
+            }
         }
 
         HealthBar.transform.localScale = new Vector3(

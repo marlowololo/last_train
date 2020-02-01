@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: LevelSettingAsset
   m_EditorClassIdentifier: 
   LevelSettingDatas:
-  - LevelTime: 10
+  - LevelTime: 30
     StartSpawnTime:
     - 1
     - 5
+    - 10
+    - 15
+    - 21
+    - 28
     ResourceSpawnTime: 2
     DamageTimerRandomMin: 3
     DamageTimerRandomMax: 5

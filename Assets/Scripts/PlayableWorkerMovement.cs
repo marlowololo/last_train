@@ -1,9 +1,14 @@
-﻿using System.Collections;
+﻿using DragonBones;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayableWorkerMovement : MonoBehaviour
 {
+    [Header("Dragon Bone")]
+    [SerializeField] UnityArmatureComponent armatureComponent;
+
+    [Header("Other")]
     [Range(0,10)] [SerializeField] float speed=1;
     [Range(0,0.5f)] [SerializeField] float offset;
     [SerializeField] string ladderTag;
@@ -15,6 +20,8 @@ public class PlayableWorkerMovement : MonoBehaviour
     public float direction=1;
     float directionY=1;
     bool isOnLadder=false;
+    bool isIdle = true;
+
 
     private void Start() 
     {
@@ -45,6 +52,11 @@ public class PlayableWorkerMovement : MonoBehaviour
            
             if(currentPosition.x>targetPosition.x)
             {
+                if(!isIdle)
+                {
+                    isIdle = true;
+                    armatureComponent.animation.FadeIn("Idle", 0.25f);
+                }
                 rb.velocity=new Vector2(0,rb.velocity.y);
             }
                         
@@ -53,6 +65,11 @@ public class PlayableWorkerMovement : MonoBehaviour
         {
             if(currentPosition.x<targetPosition.x)
             {
+                if(!isIdle)
+                {
+                    isIdle = true;
+                    armatureComponent.animation.FadeIn("Idle", 0.25f);
+                }
                 rb.velocity=new Vector2(0,rb.velocity.y);
             }
          
@@ -80,10 +97,13 @@ public class PlayableWorkerMovement : MonoBehaviour
     }
     public void MoveTo(Vector2 targetPos)
     {
+        armatureComponent.animation.FadeIn("Run", 0.25f);
         targetPosition = targetPos;
         targetPosition = new Vector2(targetPosition.x,yPosition); 
         direction = Mathf.Sign(targetPosition.x-currentPosition.x);
+        armatureComponent.armature.flipX = direction == 1 ? true : false;
         rb.velocity=new Vector2(direction*speed,0);
+        isIdle = false;
     }
 
     // public void MoveTo(GameObject targetPosObj)

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class PlayableWorkerBase : MonoBehaviour
 {
     public void OnClick()
     {
-        GameManager.Instance.selectedWorker.MoveTo(gameObject);
+        GameManager.Instance.selectedWorker.SetSelectedWorker(gameObject);
     }
 }

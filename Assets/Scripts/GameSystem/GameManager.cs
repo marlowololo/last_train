@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     public WagonPartDestroyer wagonPartDestroyer;
     public SelectedWorker selectedWorker;
     public ParalaxController paralaxController;
+    public ResourceInventoryScriptable resourceInventory;
 
     int currentResourceSpawnIndex;
     float currentTime;
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour
         currentTime = 0;
         traveling = false;
         train.InitWagon();
+        resourceInventory.resource = 0;
         StartLevel(0);
     }
     
@@ -74,6 +77,7 @@ public class GameManager : MonoBehaviour
                 traveling = false;
                 paralaxController.StopMovement();
                 Debug.Log("LEVEL FINISHED");
+                SceneManager.LoadScene("MainMenu");
             }
         }
     }
