@@ -1,15 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class PlayableWorkerInventory : MonoBehaviour
+public class StorageUpdater : MonoBehaviour
 {
     [Header("Status :")]
     [SerializeField] bool isFull;
     [SerializeField] bool isEmpty;
     [SerializeField] int itemCount;
+
     [Header("Settings :")]
     [SerializeField] int maxItemCount;
+    [SerializeField] ResourceInventoryScriptable storageAsset;
+    [SerializeField] string workerTag;
+ 
 
     private void Update() 
     {
@@ -53,6 +58,16 @@ public class PlayableWorkerInventory : MonoBehaviour
     public int Count()
     {
         return itemCount;
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.gameObject.CompareTag(workerTag))
+        {
+            Add(other.GetComponent<PlayableWorkerInventory>().Count());
+            other.GetComponent<PlayableWorkerInventory>().RemoveAll();
+        }
     }
 
 }
