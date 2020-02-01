@@ -30,10 +30,10 @@ public class BackgroundRepeater : MonoBehaviour
         }
         
         if(transform.position.x+0.5*spriteSizeX<=-0.5*screenSizeX)
-        {
-            
+        {            
             Destroy(gameObject);
         }
+        
 
     }
 }
