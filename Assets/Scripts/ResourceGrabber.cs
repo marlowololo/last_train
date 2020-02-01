@@ -20,7 +20,7 @@ public class ResourceGrabber : MonoBehaviour
     {
         if(other.gameObject.CompareTag(workerTag))
         {
-            Debug.LogError("HERHEHREHR");
+            
             isWorkerArround = true;
         }
 

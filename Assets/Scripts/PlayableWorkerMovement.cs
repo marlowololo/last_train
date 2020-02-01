@@ -25,14 +25,14 @@ public class PlayableWorkerMovement : MonoBehaviour
     }
     private void Update() 
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0))
-        {            
-            targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            targetPosition = new Vector2(targetPosition.x,yPosition); 
-            direction = Mathf.Sign(targetPosition.x-currentPosition.x);
-            rb.velocity=new Vector2(direction*speed,0);
+        // if(Input.GetKeyDown(KeyCode.Mouse0))
+        // {            
+        //     targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //     targetPosition = new Vector2(targetPosition.x,yPosition); 
+        //     direction = Mathf.Sign(targetPosition.x-currentPosition.x);
+        //     rb.velocity=new Vector2(direction*speed,0);
 
-        }
+        // }
 
         currentPosition = transform.position;
 
@@ -55,6 +55,13 @@ public class PlayableWorkerMovement : MonoBehaviour
         }
         
            
+    }
+    public void MoveTo(Vector2 targetPos)
+    {
+        targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        targetPosition = new Vector2(targetPosition.x,yPosition); 
+        direction = Mathf.Sign(targetPosition.x-currentPosition.x);
+        rb.velocity=new Vector2(direction*speed,0);
     }
 
 
