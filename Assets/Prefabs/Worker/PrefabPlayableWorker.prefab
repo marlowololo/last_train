@@ -502,6 +502,7 @@ GameObject:
   - component: {fileID: 1102374004920205501}
   - component: {fileID: 7333796454697230491}
   - component: {fileID: 3349555583441287093}
+  - component: {fileID: 5252083900791914101}
   m_Layer: 0
   m_Name: PrefabPlayableWorker
   m_TagString: worker
@@ -714,6 +715,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99aa238a11453624a9409bd8a0d8f4db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5252083900791914101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5363268666861091670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c8d82a8467b4cd596e185807e9d804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  runDecreaseAtStart: 1
+  maxHealth: 100
+  decreasePerSecond: 2
+  increasePerSecond: 20
+  timeStep: 1
 --- !u!1 &5609648341104481536
 GameObject:
   m_ObjectHideFlags: 0
