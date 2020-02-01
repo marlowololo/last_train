@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public List<float> LevelTime;
+    public LevelSettingScriptable LevelSetting;
     public Train Train;
 
     void Start()
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StartLevelTimer(int levelIndex)
     {
-        yield return new WaitForSeconds(LevelTime[levelIndex]);
+        yield return new WaitForSeconds(LevelSetting.LevelSettingDatas[levelIndex].LevelTime);
         Debug.Log("Level Finished");
     }
 

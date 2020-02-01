@@ -28,4 +28,14 @@ public class Train : MonoBehaviour
             i++;
         }
     }
+
+    public void DamageWagon(int wagonIndex, float damageAmmount)
+    {
+        ListWagon[wagonIndex].DamageWagon(damageAmmount);
+    }
+
+    public void RepairWagon(int wagonIndex, float repairAmmount)
+    {
+        ListWagon[wagonIndex].RepairWagon(repairAmmount);
+    }
 }

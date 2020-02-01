@@ -37,7 +37,7 @@ public class ResourceSpawner : MonoBehaviour
             float newYPosition = Random.Range(yPosition,yPosition+randomYPositionDeviation);
             float newTimeInterval = Random.Range(timeInterval,timeInterval+randomTimeIntervalDeviation);
             transform.position = new Vector2(newXPosition,newYPosition);
-            Instantiate(resourcePrefab,transform.position,Quaternion.identity);
+            Instantiate(resourcePrefab,transform.position,Quaternion.identity, this.transform);
             yield return new WaitForSecondsRealtime(newTimeInterval);
         }
     }
