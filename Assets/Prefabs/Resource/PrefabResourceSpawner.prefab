@@ -45,9 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcePrefab: {fileID: 4038740663375807233, guid: 6f222e5725708e400af02520e37c9e98,
     type: 3}
-  runAtStart: 1
-  xPosition: 0
-  yPosition: 0
+  runAtStart: 0
+  xPosition: 5
+  yPosition: -5
   timeInterval: 1
   randomXPositionDeviation: 0
   randomYPositionDeviation: 0

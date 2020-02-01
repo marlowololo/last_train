@@ -12,5 +12,7 @@ public class LevelSettingScriptable : ScriptableObject
     public class LevelSettingData
     {
         public float LevelTime;
+        public List<float> StartSpawnTime;
+        public float ResourceSpawnTime;
     }
 }
