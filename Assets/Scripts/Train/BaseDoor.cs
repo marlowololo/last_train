@@ -18,6 +18,6 @@ public class BaseDoor : MonoBehaviour
 
     public void TriggerAnimation()
     {
-        currentWorker.animation.Play("ForageUp1");
+        currentWorker.animation.FadeIn("ForageUp1",0.25f);
     }
 }

@@ -15,23 +15,29 @@ public class WagonPartDestroyer : MonoBehaviour
     private float timerRandomMin;
     private float timerRandomMax;
 
+    bool isTimerOn;
+
     private void Start()
     {
         currentTime = 0;
         currentRandomTimer = 5;
+        isTimerOn = false;
     }
 
     private void Update()
     {
-        currentTime += Time.deltaTime;
-        if(currentTime >= currentRandomTimer)
+        if(isTimerOn)
         {
-            int damageIndex = Random.Range(0, allWagonPart.Count);
-            currentRandomTimer = Random.Range(timerRandomMin, timerRandomMax);
+            currentTime += Time.deltaTime;
+            if(currentTime >= currentRandomTimer)
+            {
+                int damageIndex = Random.Range(0, allWagonPart.Count);
+                currentRandomTimer = Random.Range(timerRandomMin, timerRandomMax);
 
-            allWagonPart[damageIndex].PartHealth -= DefaultDamage;
+                allWagonPart[damageIndex].PartHealth -= DefaultDamage;
 
-            currentTime = 0;
+                currentTime = 0;
+            }
         }
     }
 
@@ -40,5 +46,16 @@ public class WagonPartDestroyer : MonoBehaviour
         allWagonPart = wagonParts;
         timerRandomMin = minRandom;
         timerRandomMax = maxRandom;
+    }
+
+    public void StartTimer()
+    {
+        currentTime = 0;
+        isTimerOn = true;
+    }
+
+    public void StopTimer()
+    {
+        isTimerOn = false;
     }
 }
