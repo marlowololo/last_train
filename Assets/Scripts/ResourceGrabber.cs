@@ -10,14 +10,12 @@ public class ResourceGrabber : MonoBehaviour
     [SerializeField] ResourceInventoryScriptable resourceInventoryAsset;
     [SerializeField] BaseDoor baseDoor;
 
-    private UnityArmatureComponent currentWorker;
-
     private void OnTriggerEnter2D(Collider2D other) 
     {
         if(other.gameObject.CompareTag(resourceTag))
         {
-            baseDoor.TriggerAnimation();
-            resourceInventoryAsset.resource +=1;
+            baseDoor.CollectResource();
+            //resourceInventoryAsset.resource +=1;
             Destroy(other.gameObject);
         }
     }

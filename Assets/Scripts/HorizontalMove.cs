@@ -32,15 +32,18 @@ public class HorizontalMove : MonoBehaviour
 
     public void StartMovement()
     {
-        speed = tempSpeed;
+        if(tempSpeed != 0)
+        {
+            speed = tempSpeed;
+        }
         tempSpeed = 0;
         UpdateVelocity();
     }
 
     public void StopMovement()
     {
-        speed = 0;
         tempSpeed = speed;
+        speed = 0;
         UpdateVelocity();
     }
 

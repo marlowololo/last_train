@@ -9,6 +9,7 @@ public class ParalaxController : MonoBehaviour
     
     public void StartMovement()
     {
+        prefabList = GetComponentsInChildren<HorizontalMove>();
         foreach(var item in prefabList)
         {
             item.StartMovement();
