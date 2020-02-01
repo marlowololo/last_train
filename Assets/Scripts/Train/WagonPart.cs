@@ -1,4 +1,5 @@
 ﻿using DragonBones;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,8 @@ public class WagonPart : MonoBehaviour
     private bool isBeingRepaired;
     private const float MAX_HEALTH = 100f;
 
+    private UnityArmatureComponent currentActiveWorker;
+
     private void Start()
     {
         isBeingRepaired = false;
@@ -24,13 +27,23 @@ public class WagonPart : MonoBehaviour
 
     private void Update()
     {
-        if(isBeingRepaired)
+        if(isBeingRepaired && currentActiveWorker != null)
         {
             if(resourceInventoryAsset.resource > 0 && PartHealth < MAX_HEALTH)
             {
-                GameManager.Instance.selectedWorker.PlayAnimation("Fixing");
+                if(currentActiveWorker.animation.lastAnimationName != "Fixing")
+                {
+                    currentActiveWorker.animation.FadeIn("Fixing", 0.25f);
+                }
                 PartHealth += 15 * Time.deltaTime;
                 resourceInventoryAsset.resource -= 1 * Time.deltaTime;
+            }
+            else
+            {
+                if(currentActiveWorker.animation.lastAnimationName != "Idle")
+                {
+                    currentActiveWorker.animation.FadeIn("Idle", 0.25f);
+                }
             }
         }
 
@@ -41,11 +54,23 @@ public class WagonPart : MonoBehaviour
         );
     }
 
+    public void TryRemoveActiveWorker(GameObject other)
+    {
+        if(other.GetComponentInChildren<UnityArmatureComponent>() == currentActiveWorker)
+        {
+            currentActiveWorker = null;
+            SetBeingRepaired(false);
+        }
+    }
+
     public void SetBeingRepaired(bool value)
     {
         isBeingRepaired = value;
     }
 
-
+    public void SetActiveWorker(UnityArmatureComponent unityArmature)
+    {
+        currentActiveWorker = unityArmature;
+    }
 
 }

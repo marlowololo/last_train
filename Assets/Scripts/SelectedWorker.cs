@@ -41,4 +41,9 @@ public class SelectedWorker : MonoBehaviour
         }
     }
 
+    public UnityArmatureComponent GetSelectedWorkerUAC()
+    {
+        return selectedWorker.GetComponentInChildren<UnityArmatureComponent>();
+    }
+
 }

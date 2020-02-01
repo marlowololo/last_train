@@ -237,8 +237,8 @@ GameObject:
   - component: {fileID: 9043670795202512855}
   - component: {fileID: 5150042328056687042}
   - component: {fileID: 7135248631660543986}
-  - component: {fileID: 2761048967215453284}
   - component: {fileID: 4714248731612533743}
+  - component: {fileID: 4544921903171194604}
   m_Layer: 0
   m_Name: RepairPart
   m_TagString: Untagged
@@ -373,50 +373,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2761048967215453284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6869216891070627748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b864ba75b24c95627801fec95c16cae3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  workerTag: worker
-  workerEnter:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4132381983851977324}
-        m_MethodName: SetBeingRepaired
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  workerStay:
-    m_PersistentCalls:
-      m_Calls: []
-  workerExit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4132381983851977324}
-        m_MethodName: SetBeingRepaired
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &4714248731612533743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +385,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b15a56e682721246b3dd57c1856aa71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wagonPart: {fileID: 4132381983851977324}
+--- !u!114 &4544921903171194604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869216891070627748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453d552d30b90dc449576f8000b01e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wagonPart: {fileID: 4132381983851977324}
 --- !u!1 &7691722756804411296
 GameObject:
   m_ObjectHideFlags: 0

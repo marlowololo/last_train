@@ -9,19 +9,19 @@ public class ParalaxController : MonoBehaviour
     
     public void StartMovement()
     {
-        //foreach(var item in prefabList)
-        //{
-        //    item.StartMovement();
-        //}
+        foreach(var item in prefabList)
+        {
+            item.StartMovement();
+        }
     }
 
     public void StopMovement()
     {
-        //prefabList = GetComponentsInChildren<HorizontalMove>();
-        //foreach(var item in prefabList)
-        //{
-        //    item.StopMovement();
-        //}
+        prefabList = GetComponentsInChildren<HorizontalMove>();
+        foreach(var item in prefabList)
+        {
+            item.StopMovement();
+        }
     }
 
 }

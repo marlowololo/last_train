@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
                 traveling = false;
                 paralaxController.StopMovement();
                 Debug.Log("LEVEL FINISHED");
-                SceneManager.LoadScene("MainMenu");
+                //SceneManager.LoadScene("MainMenu");
             }
         }
     }
