@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 927084302771419427}
   - component: {fileID: 927084302771419426}
   - component: {fileID: 927084302771419425}
+  - component: {fileID: 3273819652902710927}
+  - component: {fileID: 4100919382066567559}
   m_Layer: 0
   m_Name: PrefabLadder
   m_TagString: ladder
@@ -28,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927084302771419430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.22, y: -0.55, z: 0}
-  m_LocalScale: {x: 0.085, y: 0.359, z: 1}
+  m_LocalPosition: {x: -6.917, y: -0.584, z: 0}
+  m_LocalScale: {x: 0.028900001, y: 0.352897, z: 1}
   m_Children:
   - {fileID: 4483218161378342605}
   m_Father: {fileID: 0}
@@ -97,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 4.294402}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 10.8, y: 10.8}
+  m_Size: {x: 10.8, y: 19.388803}
   m_EdgeRadius: 0
 --- !u!114 &927084302771419426
 MonoBehaviour:
@@ -125,12 +127,12 @@ MonoBehaviour:
   OnMouseClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: MoveTo
-        m_Mode: 2
+      - m_Target: {fileID: 3273819652902710927}
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 927084302771419430}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -180,6 +182,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3273819652902710927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927084302771419430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cb38b950eb3414fbf75c2e6f521747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeWorker: {fileID: 0}
+--- !u!114 &4100919382066567559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927084302771419430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e921d18b105f2c82da27aed3b3368131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  workerTag: worker
+  roofYPosition: 4
 --- !u!1001 &927084300981861570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,12 +229,12 @@ PrefabInstance:
     - target: {fileID: 3668812366072793615, guid: d6a5a71005b397d6bbc7a81c4c919436,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 92.1
       objectReference: {fileID: 0}
     - target: {fileID: 3668812366072793615, guid: d6a5a71005b397d6bbc7a81c4c919436,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.244
+      value: 6.07
       objectReference: {fileID: 0}
     - target: {fileID: 3668812366072793615, guid: d6a5a71005b397d6bbc7a81c4c919436,
         type: 3}
@@ -255,12 +284,12 @@ PrefabInstance:
     - target: {fileID: 3668812366072793615, guid: d6a5a71005b397d6bbc7a81c4c919436,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.27486512
+      value: 17.87019
       objectReference: {fileID: 0}
     - target: {fileID: 3668812366072793615, guid: d6a5a71005b397d6bbc7a81c4c919436,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9167934
+      value: 0.072608225
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6a5a71005b397d6bbc7a81c4c919436, type: 3}

@@ -17,10 +17,12 @@ public class PlayableWorkerMovement : MonoBehaviour
     public Vector2 currentPosition;
     public Vector2 targetPosition;
     float yPosition;
+    public float yRoofPosition;
     public float direction=1;
     float directionY=1;
     bool isOnLadder=false;
-    bool isIdle = true;
+    public bool isIdle = true;
+    bool isOnRoof=false;
 
 
     private void Start() 
@@ -59,7 +61,7 @@ public class PlayableWorkerMovement : MonoBehaviour
                 }
                 rb.velocity=new Vector2(0,rb.velocity.y);
             }
-                        
+
         }
         else if(direction==-1)
         {
@@ -91,6 +93,11 @@ public class PlayableWorkerMovement : MonoBehaviour
                 rb.velocity=new Vector2(rb.velocity.x,0);
             }
          
+        }
+
+        if(rb.velocity.x!=0)
+        {
+            transform.position=new Vector2(transform.position.x,yPosition);
         }
         
            
