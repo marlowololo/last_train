@@ -47,7 +47,7 @@ MonoBehaviour:
     type: 3}
   runAtStart: 0
   xPosition: 5
-  yPosition: -5
+  yPosition: -2.5
   timeInterval: 1
   randomXPositionDeviation: 0
   randomYPositionDeviation: 0
