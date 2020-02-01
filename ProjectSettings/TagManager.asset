@@ -6,6 +6,8 @@ TagManager:
   tags:
   - resource
   - worker
+  - door
+  - ladder
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ public class OnWorkerTrigger : MonoBehaviour
         }
     }
     private void OnTriggerStay2D(Collider2D other) {
-        Debug.Log("stay");
+
         if(other.gameObject.CompareTag(workerTag))
         {
             workerStay.Invoke();

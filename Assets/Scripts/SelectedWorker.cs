@@ -11,14 +11,14 @@ public class SelectedWorker : MonoBehaviour
         selectedWorker=worker;
     }
 
-    public void WorkerMove(Vector2 targetPos)
-    {
-        selectedWorker.GetComponent<PlayableWorkerMovement>().MoveTo(targetPos);
-    }
-
     public void MoveTo(GameObject targetObject)
     {
         selectedWorker.GetComponent<PlayableWorkerMovement>().MoveTo(targetObject.transform.position);
+    }
+
+    public void MoveToLadder(GameObject targetObject)
+    {
+        selectedWorker.GetComponent<PlayableWorkerMovement>().MoveToLadder(targetObject.transform.position);
     }
 
 }
