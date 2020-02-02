@@ -144,8 +144,10 @@ GameObject:
   - component: {fileID: 1735837297992140714}
   - component: {fileID: 1735837297992140715}
   - component: {fileID: 8279420422865491784}
-  - component: {fileID: 7943888251263554268}
-  - component: {fileID: 3183300955905527854}
+  - component: {fileID: 4528867963566456672}
+  - component: {fileID: 7824188834024956054}
+  - component: {fileID: 8081454531342429134}
+  - component: {fileID: 7977387180315092560}
   m_Layer: 5
   m_Name: Paused_Canvas
   m_TagString: Untagged
@@ -267,6 +269,7 @@ MonoBehaviour:
   - {fileID: 1735837297992140721}
   - {fileID: 1735837297992140727}
   - {fileID: 1735837297992140712}
+  - {fileID: 4528867963566456672}
   editor: {fileID: 0}
   _showSettings: 0
   _displayMode: 0
@@ -297,6 +300,7 @@ MonoBehaviour:
   _id: On Start
   _actions:
   - {fileID: 1735837297992140719}
+  - {fileID: 7824188834024956054}
   - {fileID: 1735837297992140716}
   _parameters: []
   _showParameters: 0
@@ -488,7 +492,7 @@ MonoBehaviour:
   _id: On Game Pause
   _actions:
   - {fileID: 1735837297992140714}
-  - {fileID: 7943888251263554268}
+  - {fileID: 8081454531342429134}
   _parameters: []
   _showParameters: 0
   _showSettings: 1
@@ -520,8 +524,8 @@ MonoBehaviour:
   editor: {fileID: 0}
   _id: On Game Resume
   _actions:
-  - {fileID: 3183300955905527854}
   - {fileID: 1735837297992140715}
+  - {fileID: 7977387180315092560}
   _parameters: []
   _showParameters: 0
   _showSettings: 1
@@ -616,7 +620,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 78c53d677babe31f38d6d48e4384d3b7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c20c5e38509e4527d973fd677f41f98a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -702,7 +706,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7943888251263554268
+--- !u!114 &4528867963566456672
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -711,7 +715,115 @@ MonoBehaviour:
   m_GameObject: {fileID: 1735837297992140730}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1246764412, guid: 20990ec6b45e544b0b5f28b1e0c1c96b, type: 3}
+  m_Script: {fileID: 161578033, guid: 20990ec6b45e544b0b5f28b1e0c1c96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialized: 1
+  _reset: 0
+  _version: 1.2.5
+  _moved: 0
+  _foldout: 1
+  _drawSeparator: 0
+  enabledInEditor: 1
+  container: {fileID: 1735837297992140713}
+  editor: {fileID: 0}
+  _id: Audio
+  _dataType: 8
+  _typeName: UnityEngine.AudioClip
+  _indirectDataType: 0
+  _indirectTypeName: 
+  _defaultStringValue: 
+  _defaultIntValue: 0
+  _defaultFloatValue: 0
+  _defaultBoolValue: 0
+  _defaultVector2Value: {x: 0, y: 0}
+  _defaultVector3Value: {x: 0, y: 0, z: 0}
+  _defaultVector4Value: {x: 0, y: 0, z: 0, w: 0}
+  _defaultRectValue:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  _defaultColorValue: {r: 0, g: 0, b: 0, a: 0}
+  _defaultEnumIntValue: 0
+  _defaultBoundsValue:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  _defaultQuaternionValue: {x: 0, y: 0, z: 0, w: 0}
+  _stringValue: 
+  _intValue: 0
+  _floatValue: 0
+  _boolValue: 1
+  _vector2Value: {x: 0, y: 0}
+  _vector3Value: {x: 0, y: 0, z: 0}
+  _rectValue:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  _colorValue: {r: 0, g: 0, b: 0, a: 1}
+  _objectValue: {fileID: 8300000, guid: c20c5e38509e4527d973fd677f41f98a, type: 3}
+  _enumIntValue: 0
+  _enumCached: 0
+  _boundsValue:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  _quaternionValue: {x: 0, y: 0, z: 0, w: 1}
+  _vector4Value: {x: 0, y: 0, z: 0, w: 0}
+  _animationCurveValue:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _readOnly: 0
+  _private: 0
+  _persistent: 0
+  _indirect: 0
+  _isVariant: 0
+  _showDescription: 0
+  _description: <Description>
+  _changeListeners: []
+--- !u!114 &7824188834024956054
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735837297992140730}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1183914873, guid: 20990ec6b45e544b0b5f28b1e0c1c96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialized: 1
+  _reset: 0
+  _version: 1.2.5
+  _moved: 0
+  _foldout: 1
+  _drawSeparator: 0
+  enabledInEditor: 1
+  container: {fileID: 1735837297992140718}
+  editor: {fileID: 0}
+  _caption: Set Program Property
+  _breakpoint: 0
+  _target: {fileID: 1735837297992140721}
+  _targetVar: {fileID: 0}
+  _property: 0
+  _ignorePauseValue: 1
+  _valueVar: {fileID: 0}
+--- !u!114 &8081454531342429134
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735837297992140730}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1734157959, guid: 20990ec6b45e544b0b5f28b1e0c1c96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _initialized: 1
@@ -723,14 +835,16 @@ MonoBehaviour:
   enabledInEditor: 1
   container: {fileID: 1735837297992140721}
   editor: {fileID: 0}
-  _caption: Play Sound At Source
+  _caption: Play Music
   _breakpoint: 0
-  _audioSource: {fileID: 8279420422865491784}
-  _audioSourceVar: {fileID: 0}
+  _audioClip: {fileID: 0}
+  _audioClipVar: {fileID: 4528867963566456672}
   _volume: 1
   _volumeVar: {fileID: 0}
-  _loop: 0
---- !u!114 &3183300955905527854
+  _loop: 1
+  _fading: 0
+  _fadingVar: {fileID: 0}
+--- !u!114 &7977387180315092560
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -739,7 +853,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1735837297992140730}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1246764412, guid: 20990ec6b45e544b0b5f28b1e0c1c96b, type: 3}
+  m_Script: {fileID: 1183796483, guid: 20990ec6b45e544b0b5f28b1e0c1c96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _initialized: 1
@@ -751,10 +865,7 @@ MonoBehaviour:
   enabledInEditor: 1
   container: {fileID: 1735837297992140727}
   editor: {fileID: 0}
-  _caption: Play Sound At Source
+  _caption: Stop Music
   _breakpoint: 0
-  _audioSource: {fileID: 8279420422865491784}
-  _audioSourceVar: {fileID: 0}
-  _volume: 1
-  _volumeVar: {fileID: 0}
-  _loop: 0
+  _fading: 0
+  _fadingVar: {fileID: 0}
