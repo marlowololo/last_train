@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8316751085880793914}
   - component: {fileID: 8316751085880793915}
   - component: {fileID: 8316751085880793916}
+  - component: {fileID: 5728611472927833214}
   m_Layer: 0
   m_Name: PrefabDoor
   m_TagString: door
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8316751085880793857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.37, y: -1.26, z: 0}
-  m_LocalScale: {x: 0.10474599, y: 0.190152, z: 1}
+  m_LocalScale: {x: 0.07388124, y: 0.32420918, z: 1.705}
   m_Children:
   - {fileID: 6035517490430436615}
   m_Father: {fileID: 0}
@@ -112,12 +113,12 @@ MonoBehaviour:
   OnMouseClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: MoveTo
-        m_Mode: 2
+      - m_Target: {fileID: 5728611472927833214}
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8316751085880793857}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -193,6 +194,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.8, y: 10.8}
   m_EdgeRadius: 0
+--- !u!114 &5728611472927833214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8316751085880793857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f73ee44fb0e23b4db39052d0d8ad607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceGrabber: {fileID: 6035517490430436616}
 --- !u!1001 &7000927288335740680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,6 +214,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8316751085880793919}
     m_Modifications:
+    - target: {fileID: 3668812366072793600, guid: d6a5a71005b397d6bbc7a81c4c919436,
+        type: 3}
+      propertyPath: baseDoor
+      value: 
+      objectReference: {fileID: 5728611472927833214}
     - target: {fileID: 3668812366072793614, guid: d6a5a71005b397d6bbc7a81c4c919436,
         type: 3}
       propertyPath: m_Name
@@ -289,3 +308,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7000927288335740680}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6035517490430436616 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3668812366072793600, guid: d6a5a71005b397d6bbc7a81c4c919436,
+    type: 3}
+  m_PrefabInstance: {fileID: 7000927288335740680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6035517490430436614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e23d792748b0a7e87c39a2523415ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

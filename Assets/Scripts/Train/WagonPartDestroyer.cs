@@ -21,7 +21,6 @@ public class WagonPartDestroyer : MonoBehaviour
     {
         currentTime = 0;
         currentRandomTimer = 5;
-        isTimerOn = false;
     }
 
     private void Update()

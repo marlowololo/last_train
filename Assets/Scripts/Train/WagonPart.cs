@@ -15,6 +15,11 @@ public class WagonPart : MonoBehaviour
 
     [SerializeField] ResourceInventoryScriptable resourceInventoryAsset;
 
+    [SerializeField] SpriteRenderer targetSprite;
+    [SerializeField] Sprite[] spriteList;
+
+    public float PartDamage = 0f;
+
     private bool isBeingRepaired;
     private const float MAX_HEALTH = 100f;
 
@@ -47,8 +52,30 @@ public class WagonPart : MonoBehaviour
             }
         }
 
-        HealthBar.transform.localScale = new Vector3(
-            Mathf.Lerp(MinBarSize, MaxBarSize, PartHealth/100),
+        if(PartHealth >= 90)
+        {
+            if(targetSprite.sprite != spriteList[0])
+            {
+                targetSprite.sprite = spriteList[0];
+            }
+        }
+        else if(PartHealth >= 50)
+        {
+            if(targetSprite.sprite != spriteList[1])
+            {
+                targetSprite.sprite = spriteList[1];
+            }
+        }
+        else
+        {
+            if(targetSprite.sprite != spriteList[2])
+            {
+                targetSprite.sprite = spriteList[2];
+            }
+        }
+
+            HealthBar.transform.localScale = new Vector3(
+            Mathf.Lerp(MinBarSize, MaxBarSize, PartHealth/MAX_HEALTH),
             HealthBar.transform.localScale.y,
             HealthBar.transform.localScale.z
         );

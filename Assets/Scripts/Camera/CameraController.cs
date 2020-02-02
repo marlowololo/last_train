@@ -9,6 +9,8 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float MoveSpeed;
     [SerializeField] private float MaxZoomIn = 1;
     [SerializeField] private float MaxZoomOut = 1;
+    [SerializeField] private float ZoomInY = 1;
+    [SerializeField] private float ZoomOutY = 1;
 
     private bool isHolding;
     private Vector3 mouseInitialPosition;

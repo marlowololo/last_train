@@ -48,7 +48,8 @@ public class GameManager : MonoBehaviour
         currentTime = 0;
         currentResourceSpawnIndex = 0;
         traveling = true;
-        paralaxController.StartMovement();
+        //paralaxController.StartMovement();
+        paralaxController.UpdateSpeedFactor(1);
         StartCoroutine(StartLevelTimer(levelIndex));
         wagonPartDestroyer.Init(
             train.GetAllWagonPart(), 
@@ -87,7 +88,8 @@ public class GameManager : MonoBehaviour
             if(currentTime >= levelTime)
             {
                 traveling = false;
-                paralaxController.StopMovement();
+                //paralaxController.StopMovement();
+                paralaxController.UpdateSpeedFactor(0);
                 gameplayUIManager.ShowLevelPanel();
                 wagonPartDestroyer.StopTimer();
                 Debug.Log("LEVEL FINISHED");

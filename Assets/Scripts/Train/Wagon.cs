@@ -9,10 +9,11 @@ public class Wagon : MonoBehaviour
     [SerializeField] private GameObject wagonHealthBar;
     [SerializeField] private float minBarSize;
     [SerializeField] private float maxBarSize;
+    [SerializeField] private List<Wheel> wheels;
 
     public float WagonHealth;
     private int MaxCapacity;
-    private int CurrentPassenger;
+    public float CurrentPassenger = 100;
 
     private int brokenParts;
 
@@ -21,6 +22,9 @@ public class Wagon : MonoBehaviour
 
     public void Update()
     {
+
+        float deltaTime = Time.deltaTime;
+
         brokenParts = 0;
         foreach(WagonPart part in wagonParts)
         {
@@ -28,11 +32,15 @@ public class Wagon : MonoBehaviour
             {
                 brokenParts++;
             }
+            if(part.PartHealth <= 50)
+            {
+                CurrentPassenger -= part.PartDamage * deltaTime;
+            }
         }
 
         if(brokenParts > 0)
         {
-            WagonHealth -= brokenParts * WAGON_DEFAULT_DAMAGE * Time.deltaTime;
+            WagonHealth -= brokenParts * WAGON_DEFAULT_DAMAGE * deltaTime;
         }
 
         wagonHealthBar.transform.localScale = new Vector3(
@@ -76,5 +84,13 @@ public class Wagon : MonoBehaviour
             part.RepairPart();
         }
         WagonHealth = MAX_HEALTH;
+    }
+
+    public void SetWheelSpeedRotation(float value)
+    {
+        foreach(var wheel in wheels)
+        {
+            wheel.SetSpeedFactor(value);
+        }
     }
 }

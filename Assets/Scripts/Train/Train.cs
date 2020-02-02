@@ -8,6 +8,7 @@ public class Train : MonoBehaviour
     [SerializeField] private float WagonCount;
     [SerializeField] private ResourceInventoryScriptable ResourceInventory;
 
+    [SerializeField] private float WagonInitialXOffset;
     [SerializeField] private float WagonOffsetX;
     [SerializeField] private float WagonOffsetY;
     private List<Wagon> ListWagon;
@@ -30,7 +31,7 @@ public class Train : MonoBehaviour
         int i = 0;
         foreach(Wagon item in ListWagon)
         {
-            item.transform.position = new Vector3(WagonOffsetX * (-i), WagonOffsetY, 0);
+            item.transform.position = new Vector3(-WagonInitialXOffset + (WagonOffsetX * (-i)), WagonOffsetY, 0);
             i++;
         }
     }
@@ -80,5 +81,15 @@ public class Train : MonoBehaviour
             ListWagon.Add(Instantiate<Wagon>(WagonPrefab, this.transform));
             UpdateWagonView();
         }
+    }
+
+    public int GetTotalPassenger()
+    {
+        float totalPassenger = 0;
+        foreach(var wagon in ListWagon)
+        {
+            totalPassenger += wagon.CurrentPassenger;
+        }
+        return Mathf.FloorToInt(totalPassenger);
     }
 }
