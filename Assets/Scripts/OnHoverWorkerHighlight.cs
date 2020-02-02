@@ -6,6 +6,9 @@ public class OnHoverWorkerHighlight : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     Color initColor;
+
+    public GameObject highlight;
+
     private void Start() 
     {
         //Physics.queriesHitTriggers=true;
@@ -19,11 +22,11 @@ public class OnHoverWorkerHighlight : MonoBehaviour
 
     private void OnMouseOver() 
     {
-        spriteRenderer.material.SetColor("_Color", Color.blue);        
+        highlight.SetActive(true);        
     }
 
     private void OnMouseExit() 
     {
-        spriteRenderer.material.SetColor("_Color", initColor); 
+        highlight.SetActive(false);        
     }
 }
