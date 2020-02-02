@@ -13,10 +13,12 @@ public class MusicController : MonoBehaviour
     [SerializeField] AudioClip stationClip;
     [SerializeField] GameObject station;
     bool stationIsActive;
+    AudioClip lastClip;
 
     int current=1;
     private void Start() 
     {
+        lastClip = clip1;
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -28,24 +30,28 @@ public class MusicController : MonoBehaviour
             {
                 current =  GameManager.Instance.currentPhase;
                 audioSource.clip=clip1;
+                lastClip=audioSource.clip;
                 audioSource.Play();
             }
             else if(GameManager.Instance.currentPhase==2)
             {
                 current =  GameManager.Instance.currentPhase;
                 audioSource.clip=clip2;
+                lastClip=audioSource.clip;
                 audioSource.Play();
             }
             else if(GameManager.Instance.currentPhase==3)
             {
                 current =  GameManager.Instance.currentPhase;
                 audioSource.clip=clip3;
+                lastClip=audioSource.clip;
                 audioSource.Play();
             }
             else if(GameManager.Instance.currentPhase==4)
             {
                 current =  GameManager.Instance.currentPhase;
                 audioSource.clip=clip4;
+                lastClip=audioSource.clip;
                 audioSource.Play();
             }
             
@@ -60,6 +66,15 @@ public class MusicController : MonoBehaviour
                 audioSource.clip=stationClip;
                 audioSource.Play();
             }
+        }
+        else
+        {
+            if(audioSource.clip==stationClip)
+            {
+                audioSource.clip=lastClip;
+                audioSource.Play();
+            } 
+
         }
 
     }
