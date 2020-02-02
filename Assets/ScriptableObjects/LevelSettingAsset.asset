@@ -56,11 +56,11 @@ MonoBehaviour:
     - 110
     - 118
     ResourceSpawnTime: 2
-    DamageTimerRandomMin: 10
-    DamageTimerRandomMax: 18
-    Step2PhaseTime: 30
-    Step3PhaseTime: 60
-    Step4PhaseTime: 90
+    DamageTimerRandomMin: 8
+    DamageTimerRandomMax: 16
+    Step2PhaseTime: 20
+    Step3PhaseTime: 45
+    Step4PhaseTime: 60
   - LevelTime: 120
     StartSpawnTime:
     - 1
@@ -80,8 +80,8 @@ MonoBehaviour:
     - 110
     - 118
     ResourceSpawnTime: 2
-    DamageTimerRandomMin: 10
-    DamageTimerRandomMax: 18
-    Step2PhaseTime: 30
-    Step3PhaseTime: 60
-    Step4PhaseTime: 90
+    DamageTimerRandomMin: 6
+    DamageTimerRandomMax: 14
+    Step2PhaseTime: 10
+    Step3PhaseTime: 25
+    Step4PhaseTime: 45

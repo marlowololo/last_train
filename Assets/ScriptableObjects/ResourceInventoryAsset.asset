@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf42c535d0eb8c2ef9f5fdb90a00ab38, type: 3}
   m_Name: ResourceInventoryAsset
   m_EditorClassIdentifier: 
-  resource: 0
+  resource: 40

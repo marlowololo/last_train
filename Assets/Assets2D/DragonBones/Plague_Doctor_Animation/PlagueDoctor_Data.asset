@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c056afc5ddc57004f8eb61b384be0fec, type: 3}
+  m_Name: PlagueDoctor_Data
+  m_EditorClassIdentifier: 
+  dataName: PlagueDoctor
+  dragonBonesJSON: {fileID: 4900000, guid: b7b50da201100e44d984be16e87d51bb, type: 3}
+  textureAtlas:
+  - textureAtlasJSON: {fileID: 4900000, guid: c329a66267b6ff7488f30475db65e8ab, type: 3}
+    texture: {fileID: 2800000, guid: aa496bc817644b1429850dc3e3db6ef1, type: 3}
+    material: {fileID: 2100000, guid: e6a2451edaa48af4c89fb920f611342f, type: 2}
+    uiMaterial: {fileID: 0}
