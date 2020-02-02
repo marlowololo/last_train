@@ -573,7 +573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae9e6a1b3b5a129ba37fb2d45070c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourcePrefab: {fileID: 4038740663375807233, guid: 6f222e5725708e400af02520e37c9e98,
+  resourcePrefab: {fileID: 4038740663375807233, guid: 98affa308b6457dc08d715629793dab2,
     type: 3}
   runAtStart: 1
   xPosition: 0
