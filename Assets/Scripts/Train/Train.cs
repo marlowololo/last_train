@@ -6,8 +6,10 @@ public class Train : MonoBehaviour
 {
     [SerializeField] private Wagon WagonPrefab;
     [SerializeField] private float WagonCount;
-    [SerializeField] private float WagonOffset;
     [SerializeField] private ResourceInventoryScriptable ResourceInventory;
+
+    [SerializeField] private float WagonOffsetX;
+    [SerializeField] private float WagonOffsetY;
     private List<Wagon> ListWagon;
 
     private const float REPAIR_COST = 10;
@@ -28,7 +30,7 @@ public class Train : MonoBehaviour
         int i = 0;
         foreach(Wagon item in ListWagon)
         {
-            item.transform.position = new Vector3(WagonOffset * (-i), 0, 0);
+            item.transform.position = new Vector3(WagonOffsetX * (-i), WagonOffsetY, 0);
             i++;
         }
     }

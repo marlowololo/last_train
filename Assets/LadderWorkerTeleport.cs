@@ -11,6 +11,7 @@ public class LadderWorkerTeleport : MonoBehaviour
     BaseLadder baseLadder;
 
     private void Start() {
+        roofYPosition = GetComponent<SpriteRenderer>().bounds.max.y;
         baseLadder = GetComponent<BaseLadder>();
     }
     private void OnTriggerEnter2D(Collider2D other) {
