@@ -25,9 +25,12 @@ public class WagonPart : MonoBehaviour
 
     private UnityArmatureComponent currentActiveWorker;
 
+    [SerializeField] AudioSource audioSource;
+
     private void Start()
     {
         isBeingRepaired = false;
+        audioSource = GetComponentInParent<AudioSource>();
     }
 
     private void Update()
@@ -39,6 +42,11 @@ public class WagonPart : MonoBehaviour
                 if(currentActiveWorker.animation.lastAnimationName != "Fixing")
                 {
                     currentActiveWorker.animation.FadeIn("Fixing", 0.25f);
+                    if(!audioSource.isPlaying)
+                    {
+                        audioSource.Play();
+                    }
+                    
                 }
                 PartHealth += 15 * Time.deltaTime;
                 resourceInventoryAsset.resource -= 1 * Time.deltaTime;
