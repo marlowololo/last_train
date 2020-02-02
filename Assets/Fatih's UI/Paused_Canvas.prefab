@@ -140,11 +140,12 @@ GameObject:
   - component: {fileID: 1735837297992140720}
   - component: {fileID: 1735837297992140721}
   - component: {fileID: 1735837297992140727}
-  - component: {fileID: 1735837297992140724}
-  - component: {fileID: 1735837297992140725}
   - component: {fileID: 1735837297992140712}
   - component: {fileID: 1735837297992140714}
   - component: {fileID: 1735837297992140715}
+  - component: {fileID: 8279420422865491784}
+  - component: {fileID: 7943888251263554268}
+  - component: {fileID: 3183300955905527854}
   m_Layer: 5
   m_Name: Paused_Canvas
   m_TagString: Untagged
@@ -486,8 +487,8 @@ MonoBehaviour:
   editor: {fileID: 0}
   _id: On Game Pause
   _actions:
-  - {fileID: 1735837297992140724}
   - {fileID: 1735837297992140714}
+  - {fileID: 7943888251263554268}
   _parameters: []
   _showParameters: 0
   _showSettings: 1
@@ -519,7 +520,7 @@ MonoBehaviour:
   editor: {fileID: 0}
   _id: On Game Resume
   _actions:
-  - {fileID: 1735837297992140725}
+  - {fileID: 3183300955905527854}
   - {fileID: 1735837297992140715}
   _parameters: []
   _showParameters: 0
@@ -529,60 +530,6 @@ MonoBehaviour:
   _listeningRange: 0
   _listeningTarget: {fileID: 1735837297992140730}
   _listeningList: {fileID: 0}
---- !u!114 &1735837297992140724
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735837297992140730}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1237206220, guid: 20990ec6b45e544b0b5f28b1e0c1c96b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _initialized: 1
-  _reset: 0
-  _version: 1.2.5
-  _moved: 0
-  _foldout: 1
-  _drawSeparator: 0
-  enabledInEditor: 0
-  container: {fileID: 1735837297992140721}
-  editor: {fileID: 0}
-  _caption: Log Message
-  _breakpoint: 0
-  _messageType: 0
-  _messageTypeVar: {fileID: 0}
-  _message: pas
-  _messageVar: {fileID: 0}
---- !u!114 &1735837297992140725
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735837297992140730}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1237206220, guid: 20990ec6b45e544b0b5f28b1e0c1c96b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _initialized: 1
-  _reset: 0
-  _version: 1.2.5
-  _moved: 0
-  _foldout: 1
-  _drawSeparator: 0
-  enabledInEditor: 0
-  container: {fileID: 1735837297992140727}
-  editor: {fileID: 0}
-  _caption: Log Message
-  _breakpoint: 0
-  _messageType: 0
-  _messageTypeVar: {fileID: 0}
-  _message: res
-  _messageVar: {fileID: 0}
 --- !u!114 &1735837297992140712
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -659,3 +606,155 @@ MonoBehaviour:
   _breakpoint: 0
   _target: {fileID: 1735837297589348225}
   _targetVar: {fileID: 0}
+--- !u!82 &8279420422865491784
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735837297992140730}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 78c53d677babe31f38d6d48e4384d3b7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &7943888251263554268
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735837297992140730}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1246764412, guid: 20990ec6b45e544b0b5f28b1e0c1c96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialized: 1
+  _reset: 0
+  _version: 1.2.5
+  _moved: 0
+  _foldout: 1
+  _drawSeparator: 0
+  enabledInEditor: 1
+  container: {fileID: 1735837297992140721}
+  editor: {fileID: 0}
+  _caption: Play Sound At Source
+  _breakpoint: 0
+  _audioSource: {fileID: 8279420422865491784}
+  _audioSourceVar: {fileID: 0}
+  _volume: 1
+  _volumeVar: {fileID: 0}
+  _loop: 0
+--- !u!114 &3183300955905527854
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735837297992140730}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1246764412, guid: 20990ec6b45e544b0b5f28b1e0c1c96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialized: 1
+  _reset: 0
+  _version: 1.2.5
+  _moved: 0
+  _foldout: 1
+  _drawSeparator: 0
+  enabledInEditor: 1
+  container: {fileID: 1735837297992140727}
+  editor: {fileID: 0}
+  _caption: Play Sound At Source
+  _breakpoint: 0
+  _audioSource: {fileID: 8279420422865491784}
+  _audioSourceVar: {fileID: 0}
+  _volume: 1
+  _volumeVar: {fileID: 0}
+  _loop: 0

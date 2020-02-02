@@ -1374,14 +1374,14 @@ MonoBehaviour:
   _reset: 0
   _version: 1.2.5
   _moved: 0
-  _foldout: 0
+  _foldout: 1
   _drawSeparator: 0
   enabledInEditor: 1
   container: {fileID: 598219374565168637}
   editor: {fileID: 0}
   _caption: Play Sound
   _breakpoint: 0
-  _audioClip: {fileID: 8300000, guid: bbc1d3de3588fe440a23748196ae7072, type: 3}
+  _audioClip: {fileID: 8300000, guid: 0b416e799ffe9039eadafa0172b32418, type: 3}
   _audioClipVar: {fileID: 0}
   _volume: 1
   _volumeVar: {fileID: 0}
@@ -1506,6 +1506,7 @@ GameObject:
   - component: {fileID: 598219374675491158}
   - component: {fileID: 598219374675491157}
   - component: {fileID: 598219374675491156}
+  - component: {fileID: 5169206912564010000}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -1662,6 +1663,7 @@ MonoBehaviour:
   _id: On Pointer Enter
   _actions:
   - {fileID: 598219374675491137}
+  - {fileID: 5169206912564010000}
   _parameters:
   - {fileID: 598219374675491166}
   - {fileID: 598219374675491165}
@@ -2369,6 +2371,33 @@ MonoBehaviour:
   editor: {fileID: 0}
   _caption: Exit Game
   _breakpoint: 0
+--- !u!114 &5169206912564010000
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598219374675491142}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1125990795, guid: 20990ec6b45e544b0b5f28b1e0c1c96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialized: 1
+  _reset: 0
+  _version: 1.2.5
+  _moved: 0
+  _foldout: 1
+  _drawSeparator: 0
+  enabledInEditor: 1
+  container: {fileID: 598219374675491167}
+  editor: {fileID: 0}
+  _caption: Play Sound
+  _breakpoint: 0
+  _audioClip: {fileID: 8300000, guid: 9961129c97447b2fcb7d7639a650b1d7, type: 3}
+  _audioClipVar: {fileID: 0}
+  _volume: 1
+  _volumeVar: {fileID: 0}
 --- !u!1 &598219374764278874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2672,6 +2701,7 @@ GameObject:
   - component: {fileID: 598219375380488527}
   - component: {fileID: 598219375380488516}
   - component: {fileID: 5444898943918202084}
+  - component: {fileID: 6198448757621065547}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -2829,6 +2859,7 @@ MonoBehaviour:
   _id: On Pointer Enter
   _actions:
   - {fileID: 598219375380488891}
+  - {fileID: 6198448757621065547}
   _parameters:
   - {fileID: 598219375380488885}
   - {fileID: 598219375380488884}
@@ -3695,6 +3726,33 @@ MonoBehaviour:
   _sceneNameVar: {fileID: 0}
   _additive: 0
   _asynchronous: 0
+--- !u!114 &6198448757621065547
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598219375380488889}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1125990795, guid: 20990ec6b45e544b0b5f28b1e0c1c96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialized: 1
+  _reset: 0
+  _version: 1.2.5
+  _moved: 0
+  _foldout: 1
+  _drawSeparator: 0
+  enabledInEditor: 1
+  container: {fileID: 598219375380488886}
+  editor: {fileID: 0}
+  _caption: Play Sound
+  _breakpoint: 0
+  _audioClip: {fileID: 8300000, guid: 9961129c97447b2fcb7d7639a650b1d7, type: 3}
+  _audioClipVar: {fileID: 0}
+  _volume: 1
+  _volumeVar: {fileID: 0}
 --- !u!1 &598219375713273354
 GameObject:
   m_ObjectHideFlags: 0
@@ -4574,6 +4632,7 @@ GameObject:
   - component: {fileID: 598219376465687313}
   - component: {fileID: 598219376465687340}
   - component: {fileID: 598219376465687315}
+  - component: {fileID: 629947160735610500}
   m_Layer: 5
   m_Name: Help
   m_TagString: Untagged
@@ -4730,6 +4789,7 @@ MonoBehaviour:
   _id: On Pointer Enter
   _actions:
   - {fileID: 598219376465687303}
+  - {fileID: 629947160735610500}
   _parameters:
   - {fileID: 598219376465687324}
   - {fileID: 598219376465687299}
@@ -5863,7 +5923,34 @@ MonoBehaviour:
   editor: {fileID: 0}
   _caption: Play Sound
   _breakpoint: 0
-  _audioClip: {fileID: 8300000, guid: 9a44c05ecf4cfc56c9bc99700eb3425d, type: 3}
+  _audioClip: {fileID: 8300000, guid: 0b416e799ffe9039eadafa0172b32418, type: 3}
+  _audioClipVar: {fileID: 0}
+  _volume: 1
+  _volumeVar: {fileID: 0}
+--- !u!114 &629947160735610500
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598219376465687300}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1125990795, guid: 20990ec6b45e544b0b5f28b1e0c1c96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialized: 1
+  _reset: 0
+  _version: 1.2.5
+  _moved: 0
+  _foldout: 1
+  _drawSeparator: 0
+  enabledInEditor: 1
+  container: {fileID: 598219376465687325}
+  editor: {fileID: 0}
+  _caption: Play Sound
+  _breakpoint: 0
+  _audioClip: {fileID: 8300000, guid: 9961129c97447b2fcb7d7639a650b1d7, type: 3}
   _audioClipVar: {fileID: 0}
   _volume: 1
   _volumeVar: {fileID: 0}

@@ -506,6 +506,7 @@ GameObject:
   - component: {fileID: 6084721099845471980}
   - component: {fileID: 2058454615591505222}
   - component: {fileID: -1040715374999457982}
+  - component: {fileID: 6903561193674076950}
   m_Layer: 0
   m_Name: PrefabPlayableWorker
   m_TagString: worker
@@ -904,6 +905,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6903561193674076950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5363268666861091670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72295fced5d86b98392e56dd97b280e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: 33f373e2f383a3a3a873d2bd0ec286f5, type: 3}
+  fixingSound: {fileID: 8300000, guid: 9488e024ea6532052a2d559b12bbf939, type: 3}
+  armatureComponent: {fileID: 7610993037164580124}
+  audioSource: {fileID: -1040715374999457982}
 --- !u!1 &5609648341104481536
 GameObject:
   m_ObjectHideFlags: 0
