@@ -73,4 +73,9 @@ public class WagonPart : MonoBehaviour
         currentActiveWorker = unityArmature;
     }
 
+    public void RepairPart()
+    {
+        PartHealth = MAX_HEALTH;
+    }
+
 }

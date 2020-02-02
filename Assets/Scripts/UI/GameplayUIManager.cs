@@ -37,6 +37,6 @@ public class GameplayUIManager : MonoBehaviour
 
     private void RepairTrainAction()
     {
-        Debug.Log("REPAIR TRAIN!!");
+        GameManager.Instance.train.RepairTrain();
     }
 }

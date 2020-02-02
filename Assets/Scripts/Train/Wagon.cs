@@ -17,6 +17,7 @@ public class Wagon : MonoBehaviour
     private int brokenParts;
 
     private const float WAGON_DEFAULT_DAMAGE = 7.5f;
+    private const int MAX_HEALTH = 100;
 
     public void Update()
     {
@@ -35,7 +36,7 @@ public class Wagon : MonoBehaviour
         }
 
         wagonHealthBar.transform.localScale = new Vector3(
-            Mathf.Lerp(minBarSize, maxBarSize, WagonHealth / 100),
+            Mathf.Lerp(minBarSize, maxBarSize, WagonHealth / MAX_HEALTH),
             wagonHealthBar.transform.localScale.y,
             wagonHealthBar.transform.localScale.z
         );
@@ -66,5 +67,14 @@ public class Wagon : MonoBehaviour
     public List<WagonPart> GetWagonParts()
     {
         return wagonParts;
+    }
+
+    public void RepairAllPart()
+    {
+        foreach(var part in wagonParts)
+        {
+            part.RepairPart();
+        }
+        WagonHealth = MAX_HEALTH;
     }
 }

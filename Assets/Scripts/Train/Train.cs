@@ -7,7 +7,11 @@ public class Train : MonoBehaviour
     [SerializeField] private Wagon WagonPrefab;
     [SerializeField] private float WagonCount;
     [SerializeField] private float WagonOffset;
+    [SerializeField] private ResourceInventoryScriptable ResourceInventory;
     private List<Wagon> ListWagon;
+
+    private const float REPAIR_COST = 10;
+    private const float ADD_WAGON_COST = 50;
 
     public void InitWagon()
     {
@@ -52,5 +56,27 @@ public class Train : MonoBehaviour
     public List<Wagon> GetAllWagon()
     {
         return ListWagon;
+    }
+
+    public void RepairTrain()
+    {
+        if(ResourceInventory.resource >= REPAIR_COST)
+        {
+            ResourceInventory.resource -= REPAIR_COST;
+            foreach(var wagon in ListWagon)
+            {
+                wagon.RepairAllPart();
+            }
+        }
+    }
+
+    public void AddWagon()
+    {
+        if(ResourceInventory.resource >= ADD_WAGON_COST)
+        {
+            ResourceInventory.resource -= ADD_WAGON_COST;
+            ListWagon.Add(Instantiate<Wagon>(WagonPrefab, this.transform));
+            UpdateWagonView();
+        }
     }
 }
