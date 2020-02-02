@@ -21,7 +21,7 @@ public class HorizontalMove : MonoBehaviour
     {
         if(paralaxController==null)
         {
-            paralaxController = GetComponentInParent<ParalaxController>();
+            paralaxController = GameManager.Instance.paralaxController;
         }
         rigidBody = GetComponent<Rigidbody2D>();
         UpdateVelocity();

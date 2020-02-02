@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4775e854a4392ded7b762873e32ecadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paralaxController: {fileID: 5296227618533026165}
   speed: 2
   direction: -1
 --- !u!114 &8046132692722028221
@@ -183,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77f85ea943e96b4ea9de293133c8d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedFactor: 1
 --- !u!1 &646951136220066866
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +256,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 12
   m_Sprite: {fileID: 21300000, guid: 0a4c5f49c924112448def2421a458eea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -290,6 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4775e854a4392ded7b762873e32ecadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paralaxController: {fileID: 5296227618533026165}
   speed: 10
   direction: -1
 --- !u!50 &6618180088734866228
@@ -408,6 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4775e854a4392ded7b762873e32ecadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paralaxController: {fileID: 5296227618533026165}
   speed: 9
   direction: -1
 --- !u!114 &5666526470733372947
@@ -550,6 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4775e854a4392ded7b762873e32ecadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paralaxController: {fileID: 5296227618533026165}
   speed: 8
   direction: -1
 --- !u!50 &2751871714215872048
@@ -668,6 +673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4775e854a4392ded7b762873e32ecadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paralaxController: {fileID: 5296227618533026165}
   speed: 6
   direction: -1
 --- !u!114 &3591566116493300155
@@ -810,6 +816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4775e854a4392ded7b762873e32ecadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paralaxController: {fileID: 5296227618533026165}
   speed: 1
   direction: -1
 --- !u!50 &5476214844766118857
@@ -928,6 +935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4775e854a4392ded7b762873e32ecadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paralaxController: {fileID: 5296227618533026165}
   speed: 4
   direction: -1
 --- !u!114 &6860708747371962100
@@ -1070,6 +1078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4775e854a4392ded7b762873e32ecadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paralaxController: {fileID: 5296227618533026165}
   speed: 3
   direction: -1
 --- !u!50 &849132976824003110
@@ -1200,6 +1209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4775e854a4392ded7b762873e32ecadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paralaxController: {fileID: 5296227618533026165}
   speed: 7
   direction: -1
 --- !u!50 &2382509141896002314
@@ -1330,6 +1340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4775e854a4392ded7b762873e32ecadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paralaxController: {fileID: 5296227618533026165}
   speed: 5
   direction: -1
 --- !u!50 &446261386208448904

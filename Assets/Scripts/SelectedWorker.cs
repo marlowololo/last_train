@@ -9,7 +9,7 @@ public class SelectedWorker : MonoBehaviour
     [SerializeField] GameObject selectedMarkerPrefab;
     GameObject selectedMarker;
 
-    Vector3 markerDefaultOffset = new Vector3(0, 22f, 0);
+    Vector3 markerDefaultOffset = new Vector3(0, 1f, 0);
 
     private void Start()
     {

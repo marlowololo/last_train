@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2314389276153973177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -8.8, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: 0, y: -1.13, z: -0.00225}
+  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
   m_Children:
   - {fileID: 8800325482172197209}
   - {fileID: 5954954819329654090}
@@ -590,7 +590,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 11.73359}
+  m_Offset: {x: 1.526915, y: -0.0023094416}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -601,7 +601,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.8, y: 23.54434}
+  m_Size: {x: 0.8297298, y: 1.3673632}
   m_EdgeRadius: 0
 --- !u!114 &5363268666861091665
 MonoBehaviour:
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   armatureComponent: {fileID: 7610993037164580124}
-  speed: 10
+  speed: 2
   offset: 0
   ladderTag: 
   doorTag: 
@@ -737,7 +737,7 @@ MonoBehaviour:
   maxHealth: 100
   decreasePerSecond: 2
   increasePerSecond: 20
-  timeStep: 1
+  timeStep: 0.5
 --- !u!114 &6084721099845471980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,7 +794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFull: 0
   isEmpty: 0
-  itemCount: 0
+  itemCount: 50
   maxItemCount: 10
 --- !u!1 &5609648341104481536
 GameObject:
@@ -899,8 +899,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6380755845530209578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 22.46, z: 0}
-  m_LocalScale: {x: 0.7029355, y: 0.7029355, z: 0.7029355}
+  m_LocalPosition: {x: 0, y: 1.437, z: 0}
+  m_LocalScale: {x: 0.12512252, y: 0.12512252, z: 0.12512252}
   m_Children: []
   m_Father: {fileID: 5363268666861091671}
   m_RootOrder: 1
@@ -942,7 +942,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 36
+  m_SortingOrder: 43
   m_Sprite: {fileID: 21300000, guid: d3f75657952396673ab1caba610acbfb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
