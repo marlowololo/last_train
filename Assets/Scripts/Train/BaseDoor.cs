@@ -18,7 +18,7 @@ public class BaseDoor : MonoBehaviour
 
     public void CollectResource()
     {
-        currentWorker.GetComponentInParent<PlayableWorkerInventory>().Add(1);
+        currentWorker.GetComponentInParent<PlayableWorkerInventory>().Add(5);
         currentWorker.animation.FadeIn("ForageUp1",0.25f);
     }
 }

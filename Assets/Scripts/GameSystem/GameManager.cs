@@ -23,11 +23,17 @@ public class GameManager : MonoBehaviour
     public ParalaxController paralaxController;
     public ResourceInventoryScriptable resourceInventory;
     public GameplayUIManager gameplayUIManager;
+    public GameObject prefabScroller;
+    public GameObject stationSprite;
 
     private int currentLevelIndex;
     int currentResourceSpawnIndex;
     float currentTime;
     bool traveling;
+    public int currentPhase;
+
+    public bool UseHealthDecrease = false;
+    public bool UsePartDestroyer = false;
 
     private void Awake()
     {
@@ -45,6 +51,9 @@ public class GameManager : MonoBehaviour
     
     public void StartLevel(int levelIndex)
     {
+        currentPhase = 1;
+        prefabScroller.SetActive(true);
+        stationSprite.SetActive(false);
         currentTime = 0;
         currentResourceSpawnIndex = 0;
         traveling = true;
@@ -61,7 +70,7 @@ public class GameManager : MonoBehaviour
 
     public void StartNextLevel()
     {
-        currentLevelIndex++;
+        //currentLevelIndex++;
         StartLevel(currentLevelIndex);
     }
 
@@ -85,6 +94,24 @@ public class GameManager : MonoBehaviour
                 }
             }
 
+            if(currentPhase < 2 && currentTime >= levelSetting.LevelSettingDatas[levelIndex].Step2PhaseTime)
+            {
+                currentPhase++;
+                UseHealthDecrease = true;
+            }
+
+            if(currentPhase < 3 && currentTime >= levelSetting.LevelSettingDatas[levelIndex].Step3PhaseTime)
+            {
+                currentPhase++;
+                UsePartDestroyer = true;
+            }
+
+            if(currentPhase < 4 && currentTime >= levelSetting.LevelSettingDatas[levelIndex].Step4PhaseTime)
+            {
+                currentPhase++;
+                wagonPartDestroyer.PanicPhase();
+            }
+
             if(currentTime >= levelTime)
             {
                 traveling = false;
@@ -94,6 +121,8 @@ public class GameManager : MonoBehaviour
                 wagonPartDestroyer.StopTimer();
                 Debug.Log("LEVEL FINISHED");
                 traveling = false;
+                prefabScroller.SetActive(false);
+                stationSprite.SetActive(true);
             }
         }
     }
