@@ -17,6 +17,7 @@ public class WagonPart : MonoBehaviour
 
     [SerializeField] SpriteRenderer targetSprite;
     [SerializeField] Sprite[] spriteList;
+    [SerializeField] AudioClip[] clip;
 
     public float PartDamage = 0f;
 
@@ -44,6 +45,7 @@ public class WagonPart : MonoBehaviour
                     currentActiveWorker.animation.FadeIn("Fixing", 0.25f);
                     if(!audioSource.isPlaying)
                     {
+                        audioSource.clip=clip[2];
                         audioSource.Play();
                     }
                     
@@ -72,6 +74,11 @@ public class WagonPart : MonoBehaviour
             if(targetSprite.sprite != spriteList[1])
             {
                 targetSprite.sprite = spriteList[1];
+                if(audioSource.clip!=clip[0])
+                    {
+                        audioSource.clip=clip[0];
+                        audioSource.Play();
+                    }
             }
         }
         else
@@ -79,6 +86,11 @@ public class WagonPart : MonoBehaviour
             if(targetSprite.sprite != spriteList[2])
             {
                 targetSprite.sprite = spriteList[2];
+                if(audioSource.clip!=clip[1])
+                {
+                    audioSource.clip=clip[1];
+                    audioSource.Play();
+                }
             }
         }
 
