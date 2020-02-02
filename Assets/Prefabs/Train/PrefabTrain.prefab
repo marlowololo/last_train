@@ -46,4 +46,5 @@ MonoBehaviour:
   WagonPrefab: {fileID: -2331185177963434100, guid: f0e474e29553971499f4d3e302911101,
     type: 3}
   WagonCount: 5
-  WagonOffset: 5.4
+  WagonOffsetX: 5.4
+  WagonOffsetY: 0
