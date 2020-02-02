@@ -24,6 +24,7 @@ public class PlayableWorkerMovement : MonoBehaviour
     public bool isIdle = true;
     bool isOnRoof=false;
 
+    private PlayableWorkerSickEvent sickEvent;
 
     private void Start() 
     {
@@ -31,6 +32,8 @@ public class PlayableWorkerMovement : MonoBehaviour
         rb.velocity=Vector2.zero;
         yPosition = transform.position.y;
         targetPosition = currentPosition;
+        sickEvent = GetComponent<PlayableWorkerSickEvent>();
+
     }
     public void SetYPosition()
     {
@@ -109,7 +112,7 @@ public class PlayableWorkerMovement : MonoBehaviour
         targetPosition = new Vector2(targetPosition.x,yPosition); 
         direction = Mathf.Sign(targetPosition.x-currentPosition.x);
         armatureComponent.armature.flipX = direction == 1 ? true : false;
-        rb.velocity=new Vector2(direction*speed,0);
+        rb.velocity=new Vector2(direction*speed * (sickEvent.isSick ? 0.3f : 1f) ,0);
         isIdle = false;
     }
 

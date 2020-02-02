@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class PlayableWorkerSickEvent : MonoBehaviour
 {
     [Header("Sick Status :")]
-    [SerializeField] bool isSick;
+    public bool isSick;
 
     [Header("Settings :")]
     [SerializeField] float sickHealthLevel;

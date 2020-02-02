@@ -160,6 +160,8 @@ MonoBehaviour:
   gameplayUIManager: {fileID: 48562945}
   prefabScroller: {fileID: 1982457359}
   stationSprite: {fileID: 1778520430}
+  UseHealthDecrease: 0
+  UsePartDestroyer: 0
 --- !u!4 &34644621
 Transform:
   m_ObjectHideFlags: 0
@@ -1158,6 +1160,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnMouseClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MoveTo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773901721074022288, guid: 1f52f2b5da0d89c41b4132e667acbf38,
+        type: 3}
+      propertyPath: maxItemCount
+      value: 999999
       objectReference: {fileID: 0}
     - target: {fileID: 1773901721074022289, guid: 1f52f2b5da0d89c41b4132e667acbf38,
         type: 3}

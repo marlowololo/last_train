@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     int currentResourceSpawnIndex;
     float currentTime;
     bool traveling;
-    int currentPhase;
+    public int currentPhase;
 
     public bool UseHealthDecrease = false;
     public bool UsePartDestroyer = false;
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
 
     public void StartNextLevel()
     {
-        currentLevelIndex++;
+        //currentLevelIndex++;
         StartLevel(currentLevelIndex);
     }
 
