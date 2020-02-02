@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class HorizontalMove : MonoBehaviour
 {
-    
-
-    [Range(0,5)] [SerializeField]  float speed;
+    [SerializeField] ParalaxController paralaxController;
+    [Range(0,20)] [SerializeField]  float speed;
     [SerializeField] Direction direction;
     [SerializeField]  enum Direction
     {
@@ -20,13 +19,17 @@ public class HorizontalMove : MonoBehaviour
     
     private void Start()
     {
+        if(paralaxController==null)
+        {
+            paralaxController = GetComponentInParent<ParalaxController>();
+        }
         rigidBody = GetComponent<Rigidbody2D>();
         UpdateVelocity();
     }
 
-    private void UpdateVelocity()
+    public void UpdateVelocity()
     {
-        Vector2 force = new Vector2(speed * (float)direction, 0);
+        Vector2 force = new Vector2(paralaxController.speedFactor*speed * (float)direction, 0);
         rigidBody.velocity = force;
     }
 
