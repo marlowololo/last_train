@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public GameplayUIManager gameplayUIManager;
     public GameObject prefabScroller;
     public GameObject stationSprite;
+    public Transform camera;
 
     [SerializeField] private GameObject prefabWorker;
 
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
         currentPhase = 1;
         prefabScroller.SetActive(true);
         stationSprite.SetActive(false);
+        resourceSpawner.gameObject.SetActive(true);
         currentTime = 0;
         currentResourceSpawnIndex = 0;
         traveling = true;
@@ -126,7 +128,13 @@ public class GameManager : MonoBehaviour
                 Debug.Log("LEVEL FINISHED");
                 traveling = false;
                 prefabScroller.SetActive(false);
+                resourceSpawner.gameObject.SetActive(false);
                 stationSprite.SetActive(true);
+                camera.position = new Vector3(
+                    0,
+                    camera.position.y,
+                    camera.position.z
+                );
                 if(currentLevelIndex == 2)
                 {
                     currentLevelIndex = 0;

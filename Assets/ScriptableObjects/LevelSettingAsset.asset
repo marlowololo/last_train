@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LevelSettingAsset
   m_EditorClassIdentifier: 
   LevelSettingDatas:
-  - LevelTime: 5
+  - LevelTime: 120
     StartSpawnTime:
     - 1
     - 5
@@ -37,7 +37,7 @@ MonoBehaviour:
     Step2PhaseTime: 30
     Step3PhaseTime: 60
     Step4PhaseTime: 90
-  - LevelTime: 5
+  - LevelTime: 120
     StartSpawnTime:
     - 1
     - 5
@@ -61,7 +61,7 @@ MonoBehaviour:
     Step2PhaseTime: 30
     Step3PhaseTime: 60
     Step4PhaseTime: 90
-  - LevelTime: 5
+  - LevelTime: 120
     StartSpawnTime:
     - 1
     - 5

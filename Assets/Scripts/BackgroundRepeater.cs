@@ -29,7 +29,7 @@ public class BackgroundRepeater : MonoBehaviour
             }
         }
         
-        if(transform.position.x+0.5*spriteSizeX<=-0.5*screenSizeX)
+        if(transform.position.x+0.5*spriteSizeX<=-10*screenSizeX)
         {            
             Destroy(gameObject);
         }

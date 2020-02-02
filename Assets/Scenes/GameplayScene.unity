@@ -160,7 +160,8 @@ MonoBehaviour:
   gameplayUIManager: {fileID: 48562945}
   prefabScroller: {fileID: 1982457359}
   stationSprite: {fileID: 1778520430}
-  prefabWorker: {fileID: 0}
+  camera: {fileID: 519420032}
+  prefabWorker: {fileID: 1806747401}
   currentPhase: 0
   UseHealthDecrease: 0
   UsePartDestroyer: 0
@@ -827,7 +828,7 @@ PrefabInstance:
     - target: {fileID: 4161297958178209665, guid: 8dddb908f378d2941b9877a012d0bd65,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -58.8
       objectReference: {fileID: 0}
     - target: {fileID: 4161297958178209665, guid: 8dddb908f378d2941b9877a012d0bd65,
         type: 3}
