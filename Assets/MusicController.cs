@@ -10,6 +10,9 @@ public class MusicController : MonoBehaviour
     [SerializeField] AudioClip clip3;
     [SerializeField] AudioClip clip4;
     [SerializeField] AudioClip pausedClip;
+    [SerializeField] AudioClip stationClip;
+    [SerializeField] GameObject station;
+    bool stationIsActive;
 
     int current=1;
     private void Start() 
@@ -45,10 +48,19 @@ public class MusicController : MonoBehaviour
                 audioSource.clip=clip4;
                 audioSource.Play();
             }
+            
+            
         }
      
-
-
+        
+        if(station.gameObject.activeInHierarchy==true)
+        {
+            if(audioSource.clip!=stationClip)
+            {
+                audioSource.clip=stationClip;
+                audioSource.Play();
+            }
+        }
 
     }
 }

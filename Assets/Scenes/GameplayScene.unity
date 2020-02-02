@@ -1667,5 +1667,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4950001589072498543, guid: 0e6fe00ff981529549cd3c28cc0f93c6,
+        type: 3}
+      propertyPath: stationClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 86546d506189f10d79a37ff5275af9f0, type: 3}
+    - target: {fileID: 4950001589072498543, guid: 0e6fe00ff981529549cd3c28cc0f93c6,
+        type: 3}
+      propertyPath: station
+      value: 
+      objectReference: {fileID: 1778520430}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e6fe00ff981529549cd3c28cc0f93c6, type: 3}
