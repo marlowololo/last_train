@@ -29,6 +29,10 @@ public class HorizontalMove : MonoBehaviour
 
     public void UpdateVelocity()
     {
+        if(paralaxController == null)
+        {
+            return;
+        }
         Vector2 force = new Vector2(paralaxController.speedFactor*speed * (float)direction, 0);
         rigidBody.velocity = force;
     }
