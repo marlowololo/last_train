@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8316751085880793857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.37, y: -1.26, z: 0}
-  m_LocalScale: {x: 0.07388124, y: 0.32420918, z: 1.705}
+  m_LocalScale: {x: 0.09881616, y: 0.32420918, z: 1.705}
   m_Children:
   - {fileID: 6035517490430436615}
   m_Father: {fileID: 0}
@@ -192,18 +192,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.02044496, y: 0.011171579}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.8, y: 10.8}
+    oldSize: {x: 1.35, y: 1.35}
     newSize: {x: 10.8, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.8, y: 10.8}
+  m_Size: {x: 1.4389615, y: 1.349123}
   m_EdgeRadius: 0
 --- !u!114 &5728611472927833214
 MonoBehaviour:
@@ -230,6 +230,21 @@ PrefabInstance:
       propertyPath: baseDoor
       value: 
       objectReference: {fileID: 5728611472927833214}
+    - target: {fileID: 3668812366072793602, guid: d6a5a71005b397d6bbc7a81c4c919436,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668812366072793602, guid: d6a5a71005b397d6bbc7a81c4c919436,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668812366072793602, guid: d6a5a71005b397d6bbc7a81c4c919436,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.35
+      objectReference: {fileID: 0}
     - target: {fileID: 3668812366072793614, guid: d6a5a71005b397d6bbc7a81c4c919436,
         type: 3}
       propertyPath: m_Name
@@ -243,12 +258,12 @@ PrefabInstance:
     - target: {fileID: 3668812366072793615, guid: d6a5a71005b397d6bbc7a81c4c919436,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1909379
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 3668812366072793615, guid: d6a5a71005b397d6bbc7a81c4c919436,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.2664795
+      value: -1.716
       objectReference: {fileID: 0}
     - target: {fileID: 3668812366072793615, guid: d6a5a71005b397d6bbc7a81c4c919436,
         type: 3}
