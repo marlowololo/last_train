@@ -25,7 +25,7 @@ public class WagonPartDestroyer : MonoBehaviour
 
     private void Update()
     {
-        if(isTimerOn)
+        if(isTimerOn && GameManager.Instance.UsePartDestroyer)
         {
             currentTime += Time.deltaTime;
             if(currentTime >= currentRandomTimer)
@@ -56,5 +56,11 @@ public class WagonPartDestroyer : MonoBehaviour
     public void StopTimer()
     {
         isTimerOn = false;
+    }
+
+    public void PanicPhase()
+    {
+        timerRandomMin *= 0.6f;
+        timerRandomMax *= 0.6f;
     }
 }

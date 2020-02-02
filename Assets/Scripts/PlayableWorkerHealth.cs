@@ -31,10 +31,13 @@ public class PlayableWorkerHealth : MonoBehaviour
     {
         while(true)
         {
-            health-=timeStep*decreasePerSecond;
-            if(health<0)
+            if(GameManager.Instance.UseHealthDecrease)
             {
-                health=0;
+                health-=timeStep*decreasePerSecond;
+                if(health<0)
+                {
+                    health=0;
+                }
             }
             yield return new WaitForSecondsRealtime(timeStep);
 
