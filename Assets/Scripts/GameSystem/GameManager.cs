@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
 
     public void StartNextLevel()
     {
-        //currentLevelIndex++;
+        currentLevelIndex++;
         StartLevel(currentLevelIndex);
     }
 
@@ -127,6 +127,11 @@ public class GameManager : MonoBehaviour
                 traveling = false;
                 prefabScroller.SetActive(false);
                 stationSprite.SetActive(true);
+                if(currentLevelIndex == 2)
+                {
+                    currentLevelIndex = 0;
+                    SceneManager.LoadScene("Shelter");
+                }
             }
         }
     }
