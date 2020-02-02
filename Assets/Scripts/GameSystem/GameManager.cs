@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     public GameObject prefabScroller;
     public GameObject stationSprite;
 
+    [SerializeField] private GameObject prefabWorker;
+
     private int currentLevelIndex;
     int currentResourceSpawnIndex;
     float currentTime;
@@ -34,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     public bool UseHealthDecrease = false;
     public bool UsePartDestroyer = false;
+
+    private const float SPAWN_COST = 50f;
 
     private void Awake()
     {
@@ -132,6 +136,15 @@ public class GameManager : MonoBehaviour
         resourceSpawner.StartSpawn();
         yield return new WaitForSeconds(duration);
         resourceSpawner.StopSpawn();
+    }
+
+    public void AddWorker()
+    {
+        if(resourceInventory.resource >= SPAWN_COST)
+        {
+            resourceInventory.resource -= SPAWN_COST;
+            Instantiate(prefabWorker, Vector3.up, Quaternion.identity);
+        }
     }
 
 }

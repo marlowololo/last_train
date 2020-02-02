@@ -13,12 +13,14 @@ public class GameplayUIManager : MonoBehaviour
     [SerializeField] Button playNextLevelButton;
     [SerializeField] Button repairTrainButton;
     [SerializeField] Button addWagonButton;
+    [SerializeField] Button addWorkerButton;
 
     private void Start()
     {
         playNextLevelButton.onClick.AddListener(StartNextLevel);
         repairTrainButton.onClick.AddListener(RepairTrainAction);
         addWagonButton.onClick.AddListener(AddWagonAction);
+        addWorkerButton.onClick.AddListener(AddWorkerAction);
     }
 
     // Update is called once per frame
@@ -47,5 +49,10 @@ public class GameplayUIManager : MonoBehaviour
     private void AddWagonAction()
     {
         GameManager.Instance.train.AddWagon();
+    }
+
+    private void AddWorkerAction()
+    {
+        GameManager.Instance.AddWorker();
     }
 }
