@@ -34,7 +34,10 @@ public class HorizontalMove : MonoBehaviour
             return;
         }
         Vector2 force = new Vector2(paralaxController.speedFactor*speed * (float)direction, 0);
-        rigidBody.velocity = force;
+        if(rigidBody != null)
+        {
+            rigidBody.velocity = force;
+        }
     }
 
     public void StartMovement()

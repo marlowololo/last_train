@@ -9,7 +9,7 @@ public class ShelterScript : MonoBehaviour
     [SerializeField] private Camera camera;
     bool playZoom;
 
-    private float zoomValue = 1;
+    private float zoomValue = 0.05f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class ShelterScript : MonoBehaviour
     private IEnumerator PlayRoutine()
     {
         playZoom = true;
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(20f);
         playZoom = false;
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("MainMenu");
