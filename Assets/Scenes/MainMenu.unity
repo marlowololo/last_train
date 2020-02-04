@@ -513,5 +513,57 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 598219376449623685, guid: a1cbaa474222e8844a3358cf30dac44b,
+        type: 3}
+      propertyPath: m_text
+      value: 'Credits
+
+
+        Game Design : Alfin
+
+
+        Programmer : Insan & Mika
+
+
+        Art : Laura & Reihan
+
+
+        UI : Fatih'
+      objectReference: {fileID: 0}
+    - target: {fileID: 598219376449623685, guid: a1cbaa474222e8844a3358cf30dac44b,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 89
+      objectReference: {fileID: 0}
+    - target: {fileID: 598219376449623685, guid: a1cbaa474222e8844a3358cf30dac44b,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 598219376449623685, guid: a1cbaa474222e8844a3358cf30dac44b,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 598219376449623685, guid: a1cbaa474222e8844a3358cf30dac44b,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 598219376449623685, guid: a1cbaa474222e8844a3358cf30dac44b,
+        type: 3}
+      propertyPath: m_paragraphSpacing
+      value: 6.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 598219376449623685, guid: a1cbaa474222e8844a3358cf30dac44b,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 10.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 598219376449623685, guid: a1cbaa474222e8844a3358cf30dac44b,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10.77
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1cbaa474222e8844a3358cf30dac44b, type: 3}

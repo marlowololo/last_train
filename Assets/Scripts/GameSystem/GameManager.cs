@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     private int currentLevelIndex;
     int currentResourceSpawnIndex;
-    float currentTime;
+    [SerializeField] float currentTime;
     bool traveling;
     public int currentPhase;
 

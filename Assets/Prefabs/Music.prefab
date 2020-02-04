@@ -47,8 +47,8 @@ MonoBehaviour:
   audioSource: {fileID: 4950001589072498542}
   clip1: {fileID: 8300000, guid: 294c5f60ed2b06f25a504a087c98ae61, type: 3}
   clip2: {fileID: 8300000, guid: b972838a6c1ccdd089174f59cb7f19ef, type: 3}
-  clip3: {fileID: 8300000, guid: b972838a6c1ccdd089174f59cb7f19ef, type: 3}
-  clip4: {fileID: 8300000, guid: b972838a6c1ccdd089174f59cb7f19ef, type: 3}
+  clip3: {fileID: 8300000, guid: ba7f19299132774a3b86884b81220ceb, type: 3}
+  clip4: {fileID: 8300000, guid: 4c6b1f3a846238ebb9e0bb9465534d6f, type: 3}
   pausedClip: {fileID: 8300000, guid: c20c5e38509e4527d973fd677f41f98a, type: 3}
   stationClip: {fileID: 8300000, guid: 86546d506189f10d79a37ff5275af9f0, type: 3}
   station: {fileID: 0}
