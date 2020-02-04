@@ -509,8 +509,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4955884849977487242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalPosition: {x: -0.0462, y: 0.0185, z: 0}
+  m_LocalScale: {x: 0.7833617, y: 1.2112722, z: 1}
   m_Children: []
   m_Father: {fileID: 5363268666861091671}
   m_RootOrder: 3
@@ -587,7 +587,6 @@ GameObject:
   - component: {fileID: 2058454615591505222}
   - component: {fileID: -1040715374999457982}
   - component: {fileID: 6903561193674076950}
-  - component: {fileID: 8287695276955677463}
   m_Layer: 0
   m_Name: PrefabPlayableWorker
   m_TagString: worker
@@ -767,7 +766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68116ee5395392fb1a356ae7fb80f378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlight: {fileID: 0}
+  highlight: {fileID: 4955884849977487242}
 --- !u!114 &7333796454697230491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1005,19 +1004,6 @@ MonoBehaviour:
   fixingSound: {fileID: 8300000, guid: 9488e024ea6532052a2d559b12bbf939, type: 3}
   armatureComponent: {fileID: 7610993037164580124}
   audioSource: {fileID: -1040715374999457982}
---- !u!114 &8287695276955677463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5363268666861091670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68116ee5395392fb1a356ae7fb80f378, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlight: {fileID: 4955884849977487242}
 --- !u!1 &5507229334008896646
 GameObject:
   m_ObjectHideFlags: 0

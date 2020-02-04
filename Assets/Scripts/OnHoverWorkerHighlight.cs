@@ -22,7 +22,7 @@ public class OnHoverWorkerHighlight : MonoBehaviour
 
     private void OnMouseOver() 
     {
-        highlight.SetActive(true);        
+        highlight.SetActive(true);
     }
 
     private void OnMouseExit() 
